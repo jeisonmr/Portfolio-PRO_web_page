@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+
+:root{
+/* Colors */
+--bg-1: #000000;
+--bg-2: #181818;
+--bg-3: #1D1D1D;
+--bg-4: #262626;
+
+/* Fonts*/
+--font-1: font-family: 'Barlow', sans-serif;
+--font-2: font-family: 'Gruppo', cursive;
+--font-3: font-family: 'Jura', sans-serif;
+}
