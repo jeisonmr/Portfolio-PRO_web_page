@@ -1,0 +1,21 @@
+---
+import Menu from "../Json/Menu.json";
+import "../../Styles/root.css";
+---
+
+<ul class="menuBar">
+  {
+    Menu.map((i) => {
+      <li class="menuItem">{i.menu}</li>;
+    })
+  }
+</ul>
+
+<style>
+  .menuBar {
+    display: flex;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+  }
+</style>
