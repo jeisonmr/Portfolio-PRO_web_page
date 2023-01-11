@@ -1,0 +1,20 @@
+[
+      {
+            "titulo": "PROYECTOS PROFESIONALES",
+            "botones": [
+                  "All",
+                  "Frameworks",
+                  "Vanilla",
+                  "WordPress"
+            ],
+            "proyectos": [
+                  "/src/resource/img/experiencia/alutrafic.webp",
+                  "/src/resource/img/experiencia/andreis.webp",
+                  "/src/resource/img/experiencia/canadian.webp",
+                  "/src/resource/img/experiencia/gascade.webp",
+                  "/src/resource/img/experiencia/jv.webp",
+                  "/src/resource/img/experiencia/png.webs",
+                  "/src/resource/img/experiencia/ultra.webp",
+            ]
+      }
+]

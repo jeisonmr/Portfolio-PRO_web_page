@@ -1,0 +1,16 @@
+[
+      {
+            "title": "Jeison",
+            "subtitle": "Muñoz",
+            "description": [
+                  "Front end developer",
+                  "WordPress developer"
+            ],
+            "social": {
+                  "linkedin": "/public/linkedin.svg",
+                  "github": "/public/github.svg",
+                  "cv": "/public/cv.svg",
+                  "qr": "/public/qr.webp"
+            }
+      }
+]
