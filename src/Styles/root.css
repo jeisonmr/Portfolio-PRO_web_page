@@ -8,13 +8,25 @@
 --bg-2: #181818;
 --bg-3: #1D1D1D;
 --bg-4: #262626;
+--bg-5: #FFFFFF;
+--bg-6: #d3d3d3;
 
 /* Fonts*/
---font-1: font-family: 'Barlow', sans-serif;
---font-2: font-family: 'Gruppo', cursive;
---font-3: font-family: 'Jura', sans-serif;
+--font-1: 'Barlow', sans-serif;
+--font-2: 'Gruppo', cursive;
+--font-3: 'Jura', sans-serif;
 
 /* Colors */
 --cl-1: #FFFFFF;
 --cl-2: #C4C4C4;
+--cl-3: #000000;
 }
+
+/*
+xs <576px = Celulares
+sm ≥576px = Tablet
+md ≥768px = Laptop
+lg ≥992px = Desktop
+xl ≥1200px = 2K
+xxl ≥1400px = 4K
+*/
