@@ -2,6 +2,7 @@
 import Logo from "../Components/res/logo.astro";
 import Menu from "../Components/res/menu.astro";
 import BtnLeng from "../Components/res/es-en.astro";
+import '../Styles/root.css'
 
 interface Props {
   btnTitle: string;
@@ -14,7 +15,7 @@ const { btnTitle } = Astro.props;
     <Logo />
   </div>
   <div class="menuContainer">
-    <Menu btnTitle={btnTitle}/>
+    <Menu btnTitle={btnTitle} />
   </div>
 </nav>
 
@@ -24,7 +25,8 @@ const { btnTitle } = Astro.props;
     height: 60px;
     display: flex;
     justify-content: space-between;
-    padding: 10px 30px;
+    padding: 10px 30px !important;
+    background-color: var(--bg-1);
   }
   .logoContianer {
     width: 40px;

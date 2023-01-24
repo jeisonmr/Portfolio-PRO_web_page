@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 :root{
 /* Backgrounds */
@@ -13,8 +14,9 @@
 
 /* Fonts*/
 --font-1: 'Barlow', sans-serif;
---font-2: 'Gruppo', cursive;
---font-3: 'Jura', sans-serif;
+--font-2: 'Staatliches', cursive;
+--font-3: 'Gruppo', cursive;
+--font-4: 'Jura', sans-serif;
 
 /* Colors */
 --cl-1: #FFFFFF;
