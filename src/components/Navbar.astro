@@ -26,7 +26,9 @@ const { btnTitle } = Astro.props;
     display: flex;
     justify-content: space-between;
     padding: 10px 30px !important;
-    background-color: var(--bg-1);
+    background-color: var(--bg-2);
+    position: fixed !important;
+    z-index: 200;
   }
   .logoContianer {
     width: 40px;
@@ -40,8 +42,11 @@ const { btnTitle } = Astro.props;
   .menuDesktop {
     display: none;
   }
-
+/* ================================================================= */
   @media screen and (max-width: 576px) {
+    .navBar{
+      width: 100% !important;
+    }
     .menuContainer {
       display: flex;
       flex-direction: column;
