@@ -1,0 +1,45 @@
+---
+import "../Styles/root.css";
+import DataSkills from "./Json/Skills";
+---
+
+<section class="skillsContainer">
+  <main class="columnSkills">
+    <h2>{DataSkills.habilidades.titulo}</h2>
+    <h3>{DataSkills.habilidades.subtitulo}</h3>
+    <div class="items">
+      {
+        DataSkills.habilidades.img.map((i) => {
+          DataSkills.habilidades.lenaguajes.map((j) => {
+            return (
+              <div class="Lengujes">
+                <p>{i}</p>
+                <img src={j} alt="" />
+              </div>
+            );
+          });
+        })
+      }
+    </div>
+  </main>
+  <main class="columnSkills"></main>
+  <main class="columnSkills"></main>
+</section>
+
+<style>
+  .skillsContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bg-1);
+    color: var(--cl-1);
+  }
+  .columnSkills {
+    display: flex;
+    flex-direction: column;
+  }
+  .iconsSkills {
+    width: 10px;
+  }
+</style>

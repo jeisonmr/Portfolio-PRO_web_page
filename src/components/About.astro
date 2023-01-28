@@ -1,20 +1,98 @@
 ---
-import '../Styles/root.css';
-import DataAbout from './Json/About';
+import "../Styles/root.css";
+import DataAbout from "./Json/About";
 ---
 
 <section class="aboutContainer">
-<div class="dataContainer">
-      <p>{DataAbout.titulo}</p>
-
-</div>
-<div class="animationContainer"></div>
+  <div class="component">{DataAbout.componente}</div>
+  <div class="contentContainer">
+    <div class="dataContainer">
+      <p class="title">{DataAbout.titulo}</p>
+      <p class="description">{DataAbout.descripcion}</p>
+      <p class="ubication">{DataAbout.ubicacion}</p>
+    </div>
+    <div class="animationContainer">
+      <img class="qr" src={DataAbout.qr} alt="QR" />
+    </div>
+  </div>
 </section>
 
 <style>
-      .aboutContainer{
-            width: 100%;
-            height: 100vh;
-            background-color: var(--bg-4)
-      }
+  .aboutContainer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-4);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .contentContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(90deg, #181818 0%, #181818 50%, #262626 50%);
+
+  }
+  .dataContainer {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    padding: 22vh 60px 0 100px !important;
+    z-index: 50;
+  }
+  .animationContainer {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 50;
+  }
+  .qr {
+    width: 100px;
+    position: absolute;
+    right: 60px;
+    top: -50px;
+    z-index: 30 !important;
+    transition: 0.5s;
+  }
+  .qr:hover {
+    transform: scale(3);
+    transform: translate(0, 80px);
+    transition: 0.5s;
+  }
+  .title {
+    color: var(--cl-1);
+    font-family: var(--font-2);
+    font-size: 60px;
+    z-index: 150 !important;
+    font-weight: 400;
+  }
+  .description {
+    color: var(--cl-1);
+    font-family: var(--font-1);
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+    z-index: 150;
+    margin-top: 10vh !important;
+    position: relative;
+  }
+  .ubication {
+    color: var(--cl-1);
+    font-family: var(--font-1);
+    font-size: 15px;
+    font-weight: 600;
+    z-index: 150;
+    position: absolute;
+    bottom: 2rem;
+    left: 15rem;
+  }
+  .component {
+    position: absolute;
+    color: var(--cl-5);
+    font-size: 20vw;
+    z-index: 40;
+    bottom: 1vh;
+    left: 13vw;
+    font-family: var(--font-2);
+  }
 </style>
