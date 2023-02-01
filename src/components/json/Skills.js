@@ -1,65 +1,129 @@
 const dataSkills = {
   habilidades: {
-    titulo: "habilidades",
-    subtitulo: "Lenguajes",
-    img: [
-      "/public/Resource/img/habilidades/html.svg",
-      "/public/Resource/img/habilidades/css.svg",
-      "/public/Resource/img/habilidades/js.svg",
-      "/public/Resource/img/habilidades/typescript.svg",
+    titulo: "HABILIDADES",
+    subt1: "Lenguajes",
+    lenguajes: [
+      {
+        img: "/public/Resource/img/habilidades/htmlg.webp",
+        lenguaje: "HTML",
+      },
+      {
+        img: "/public/Resource/img/habilidades/cssg.webp",
+        lenguaje: "CSS",
+      },
+      {
+        img: "/public/Resource/img/habilidades/jsg.webp",
+        lenguaje: "JavaScript",
+      },
+      {
+        img: "/public/Resource/img/habilidades/tsg.webp",
+        lenguaje: "TypeScript",
+      },
     ],
-    lenaguajes: ["HTML", "CSS", "JavaScript", "TypeScript"],
+    subt2: "Frameworks",
+    frameworks: [
+      {
+        img: "/public/Resource/img/habilidades/Reactg.webp",
+        framework: "React",
+      },
+      {
+        img: "/public/Resource/img/habilidades/bootstrapg.webp",
+        framework: "Bootstrap",
+      },
+      {
+        img: "/public/Resource/img/habilidades/astrog.webp",
+        framework: "Astro",
+      },
+    ],
+    subt3: "C M S",
+    plugins: [
+      {
+        img: "/public/Resource/img/habilidades/wpg.webp",
+        plugin: "WordPress",
+      },
+      {
+        img: "/public/Resource/img/habilidades/elementorg.webp",
+        plugin: "Elementor",
+      },
+      {
+        img: "/public/Resource/img/habilidades/divig.webp",
+        plugin: "Divi",
+      },
+    ],
   },
-  experiencia: {
-    titulo: "Experiencia",
-    empresas: [
-      "PNG Technology Solutions",
-      "Freelancer",
-      "Canadian PVC",
-      "JV Disingelect",
-      "Populi",
-    ],
-    cargos: [
-      "Developer Front end",
-      "Front end and WordPress",
-      "Development engineer",
-      "WordPress developer",
-      "WordPress developer",
+  experiencias: {
+    titulo: "EXPERIENCIA",
+    experiencia: [
+      {
+        img: "/public/Resource/img/experiencia/pngg.webp",
+        empresa: "PNG Technology Solutions",
+        cargo: "Developer Web Front end",
+      },
+      {
+        img: "/public/Resource/img/experiencia/freeg.webp",
+        empresa: "Freelancer",
+        cargo: "Developer Web Front End, WordPress Developer",
+      },
+      {
+        img: "/public/Resource/img/experiencia/canadiang.webp",
+        empresa: "Canadian PVC",
+        cargo: "Development Engineer",
+      },
+      {
+        img: "/public/Resource/img/experiencia/jvg.webp",
+        empresa: "JV Disingelect",
+        cargo: "Developer Front End, WordPress Developer",
+      },
+      {
+        img: "/public/Resource/img/experiencia/populig.webp",
+        empresa: "Populi",
+        cargo: "WordPress Developer",
+      },
     ],
   },
   educacion: {
-    titulo: "Edicación",
-    certificado: ["Ingeniero de sistemas", "SCRUM Foundation"],
-    entidad: ["Politecnico Costa Atlantica", "CertiProf"],
-  },
-  personales: {
-    titulo: "H. Personales",
-    descripcion: ["Organizado", "Trabajo en equipo", "Profesional"],
-  },
-  hobbies: {
-    titulo: "Hobies",
-    hobbies: [
+    titulo: "EDUCACIÓN",
+    profesional: [
       {
-        titulo: "Viajar",
-        imagen: "/src/resource/img/hobbies/viajar.webp",
+        titulado: "Ingeniero de sistemas",
+        cartificado: "Politecnico de la Costa Atlantica",
       },
       {
-        titulo: "Cine",
-        imagen: "/src/resource/img/hobbies/cine.webp",
+        titulado: "SCRUM Foundation",
+        cartificado: "CertiProf",
       },
       {
-        titulo: "GyM",
-        imagen: "/src/resource/img/hobbies/gym.webp",
-      },
-      {
-        titulo: "Estudio",
-        imagen: "/src/resource/img/hobbies/estudio.webp",
+        tituladoo: "Magister Ingenieria y Computo",
+        cartificadoo: "Universidad Simon Bolivar",
       },
     ],
   },
-  logotipo: {
-    logo: "/src/resource/img/habilidades/jm.webp",
+  personales: {
+    titulo: "H. PERSONALES",
+    descripcion: "Organizado - Trabajo en equipo - Profesional",
   },
+  hobbies: {
+    titulo: "HOBBIES",
+    hobbies: [
+      {
+        titulo: "Playa",
+        imagen: "/public/Resource/img/hobbies/playag.webp",
+      },
+      {
+        titulo: "Cine",
+        imagen: "/public/Resource/img/hobbies/cineg.webp",
+      },
+      {
+        titulo: "GyM",
+        imagen: "/public/Resource/img/hobbies/gymg.webp",
+      },
+      {
+        titulo: "Estudio",
+        imagen: "/public/Resource/img/hobbies/codeg.webp",
+      },
+    ],
+  },
+  logotipo: "/public/Resource/img/logos/jm.webp",
 };
 
 export default dataSkills;

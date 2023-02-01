@@ -5,41 +5,199 @@ import DataSkills from "./Json/Skills";
 
 <section class="skillsContainer">
   <main class="columnSkills">
-    <h2>{DataSkills.habilidades.titulo}</h2>
-    <h3>{DataSkills.habilidades.subtitulo}</h3>
-    <div class="items">
+    <h2 class="lenguaje">{DataSkills.habilidades.titulo}</h2>
+    <h3>{DataSkills.habilidades.subt1}</h3>
+    <div class="lenguajes">
       {
-        DataSkills.habilidades.img.map((i) => {
-          DataSkills.habilidades.lenaguajes.map((j) => {
-            return (
-              <div class="Lengujes">
-                <p>{i}</p>
-                <img src={j} alt="" />
-              </div>
-            );
-          });
+        DataSkills.habilidades.lenguajes.map((i) => {
+          return (
+            <div class="items">
+              <img src={i.img} alt="" />
+              <p>{i.lenguaje}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+    <h3>{DataSkills.habilidades.subt2}</h3>
+    <div class="frameworks">
+      {
+        DataSkills.habilidades.frameworks.map((i) => {
+          return (
+            <div class="items">
+              <img src={i.img} alt="" />
+              <p>{i.framework}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+    <h3>{DataSkills.habilidades.subt3}</h3>
+    <div class="frameworks">
+      {
+        DataSkills.habilidades.plugins.map((i) => {
+          return (
+            <div class="items">
+              <img src={i.img} alt="" />
+              <p>{i.plugin}</p>
+            </div>
+          );
         })
       }
     </div>
   </main>
-  <main class="columnSkills"></main>
-  <main class="columnSkills"></main>
+  <main class="columnSkills col2">
+    <h2>{DataSkills.experiencias.titulo}</h2>
+    <h3>Han confiado en mi</h3>
+    <div class="experiencias">
+      {
+        DataSkills.experiencias.experiencia.map((i) => {
+          return (
+            <div class="items">
+              <img src={i.img} alt="" />
+              <div class="subItems">
+                <p>{i.empresa}</p>
+                <span>{i.cargo}</span>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+    <h2>{DataSkills.educacion.titulo}</h2>
+    <h3></h3>
+    <div class="educacion">
+      {
+        DataSkills.educacion.profesional.map((i) => {
+          return (
+            <div class="subItems">
+              <p>{i.titulado}</p>
+              <span>{i.cartificado}</span>
+            </div>
+          );
+        })
+      }
+    </div>
+  </main>
+  <main class="columnSkills col3">
+    <h2>{DataSkills.personales.titulo}</h2>
+    <h3></h3>
+    <div class="hPersonales">
+      <div class="subItems">
+        <p>{DataSkills.personales.descripcion}</p>
+      </div>
+    </div>
+    <h2>{DataSkills.hobbies.titulo}</h2>
+    <h3></h3>
+    <div class="hobbies">
+      <div class="hobbiesGrid">
+        {
+          DataSkills.hobbies.hobbies.map((i) => {
+            return (
+              <div class="gridItems">
+                <img src={i.imagen} alt="" />
+                <p>{i.titulo}</p>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+    <div class="Logo">
+      <img src={DataSkills.logotipo} alt="" />
+    </div>
+  </main>
 </section>
 
 <style>
+  * {
+    /* border: 0.1px solid red; */
+  }
   .skillsContainer {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: row;
-    background-color: var(--bg-1);
+    position: relative;
+    background-color: var(--bg-3);
     color: var(--cl-1);
   }
   .columnSkills {
+    width: 33.3%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    /* border: 0.1px solid red; */
   }
-  .iconsSkills {
-    width: 10px;
+  .columnSkills > h2 {
+    margin: 50px 0 30px 60px !important;
+    font-family: var(--font-2);
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+  .columnSkills > h3 {
+    margin: 50px 0 30px 60px !important;
+    font-family: var(--font-1);
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+  .items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0 0 30px 60px !important;
+  }
+  .subItems {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px 60px !important;
+  }
+  .items > img {
+    width: 50px;
+  }
+  .items > p {
+    font-family: var(--font-2);
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+  .subItems > p {
+    font-family: var(--font-2);
+    font-weight: 100;
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+  .subItems > span {
+    font-family: var(--font-3);
+    font-weight: 100;
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+  .hobbiesGrid {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 50px;
+  }
+  .gridItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gridItems > img {
+    width: 50px;
+  }
+  .gridItems > p {
+    font-family: var(--font-3);
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Logo > img {
+    margin-top: 150px !important;
   }
 </style>
