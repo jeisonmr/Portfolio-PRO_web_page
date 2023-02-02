@@ -1,0 +1,34 @@
+---
+import "../../Styles/root.css";
+import DataSocial from '../Json/Social';
+---
+
+<div class="social_2">
+  {
+    DataSocial.social.map((i) => {
+      return (
+        <a href={i.url} target="_blank">
+          <img src={i.img} class="icon" alt="social" />
+        </a>
+      );
+    })
+  }
+</div>
+
+<style>
+  .social_2 {
+    width: 100%;
+    height: 20%;
+    text-decoration: none;
+    list-style: none;
+  }
+  .icon {
+    width: 1.5rem;
+    margin: 0 10px !important;
+    transition: 0.5s;
+  }
+  .icon:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+  }
+</style>

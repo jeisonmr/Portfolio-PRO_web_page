@@ -1,5 +1,6 @@
 ---
 import DataHome from "./Json/Home";
+import Social from "../Components/res/social.astro";
 ---
 
 <section class="homeContainer">
@@ -19,6 +20,9 @@ import DataHome from "./Json/Home";
         }
       </div>
       <div class="social_2">
+        <Social />
+      </div>
+      <!-- <div class="social_2">
         {
           DataHome.social.map((i) => {
             return (
@@ -28,7 +32,7 @@ import DataHome from "./Json/Home";
             );
           })
         }
-      </div>
+      </div> -->
     </div>
 
     <div class="divHome"></div>
@@ -143,22 +147,8 @@ import DataHome from "./Json/Home";
   }
   /* ================================================================= */
   .social_2 {
-    width: 100%;
-    height: 20%;
     padding: 5rem 0 0 10rem !important;
-    text-decoration: none;
-    list-style: none;
   }
-  .icon {
-    width: 1.5rem;
-    margin: 0 10px !important;
-    transition: 0.5s;
-  }
-  .icon:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
-  }
-
   /* ================================================================= */
   @media screen and (max-width: 576px) {
     .homeContainer > div:nth-child(1) {

@@ -1,0 +1,62 @@
+---
+import "../Styles/root.css";
+import DataProjects from "./Json/Projects";
+---
+
+<section class="projectContainer">
+  <h2>{DataProjects.titulo}</h2>
+  <main class="projects">
+    <div class="imgProjects">
+      <div class="imgpos">
+      {
+            DataProjects.proyectos.map((i) => {
+            return <img src={i.img} class="imgs"/>
+            })}
+      </div>
+    </div>
+  </main>
+</section>
+
+<style>
+  /* * {
+    border: 1px solid red;
+  } */
+  .projectContainer {
+    background-color: var(--bg-3) !important;
+    width: 100%;
+    height: auto;
+    padding-top: 70px !important;
+  }
+  .projectContainer > h2 {
+    font-family: var(--font-2);
+    font-size: 40px;
+    color: var(--cl-1);
+    display: flex;
+    justify-content: center;
+    letter-spacing: 3px;
+    margin-bottom: 50px !important;
+  }
+  .projects {
+    background: var(--bg-2);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, auto) ;
+    grid-template-rows: repeat(2, auto);
+  }
+  .imgpos{
+      width: 100%;
+  }
+.imgs{
+      width: 25%;
+      height: auto;
+      filter: grayscale(1);
+      margin-top: -5px !important;
+      transition: 1s;
+}
+.imgs:hover{
+      filter: grayscale(.1);
+      /* filter: saturate(1); */
+      transition: .4s;
+}
+</style>
