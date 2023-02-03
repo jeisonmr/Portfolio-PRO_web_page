@@ -4,7 +4,7 @@ import DataSkills from "./Json/Skills";
 ---
 
 <section class="skillsContainer">
-  <main class="columnSkills">
+  <main class="columnSkills col1">
     <h2 class="lenguaje">{DataSkills.habilidades.titulo}</h2>
     <h3>{DataSkills.habilidades.subt1}</h3>
     <div class="lenguajes">
@@ -84,7 +84,7 @@ import DataSkills from "./Json/Skills";
     <h3></h3>
     <div class="hPersonales">
       <div class="subItems">
-        <p>{DataSkills.personales.descripcion}</p>
+        <p class="dataPersonales">{DataSkills.personales.descripcion}</p>
       </div>
     </div>
     <h2>{DataSkills.hobbies.titulo}</h2>
@@ -127,7 +127,6 @@ import DataSkills from "./Json/Skills";
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* border: 0.1px solid red; */
   }
   .columnSkills > h2 {
     margin: 50px 0 30px 60px !important;
@@ -179,7 +178,7 @@ import DataSkills from "./Json/Skills";
     justify-content: center;
     gap: 50px;
   }
-  .gridItems{
+  .gridItems {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,12 +191,118 @@ import DataSkills from "./Json/Skills";
     font-size: 15px;
     letter-spacing: 2px;
   }
-  .Logo{
+  .Logo {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .Logo > img {
     margin-top: 150px !important;
+  }
+  /* View Tablet */
+  @media only screen and (max-width: 834px) {
+    .skillsContainer {
+      width: 100%;
+      height: auto;
+      display: grid;
+      /* grid-template-columns: 40% 60%;
+      grid-template-rows: 1fr 1fr; */
+    }
+    .columnSkills {
+      width: 100%;
+      height: 100%;
+    }
+    .columnSkills > h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 100px 0 0 0 !important;
+    }
+    .columnSkills > h2:nth-child(4) {
+      margin-top: -0.5rem !important;
+    }
+    .columnSkills > h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem !important;
+      font-size: 1.2rem;
+    }
+    .subItems {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem 0 !important;
+    }
+    .subItems > .dataPersonales {
+      display: flex;
+      justify-content: center;
+    }
+    .educacion {
+      padding-left: 3rem !important;
+    }
+    .Logo > img {
+      width: 8rem;
+    }
+    .col1 > div{
+      
+    }
+    .col3 {
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      /* text-align: center; */
+    }
+  }
+  /* View Mobile */
+  @media only screen and (max-width: 576px) {
+    .skillsContainer {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background-color: var(--bg-3);
+      color: var(--cl-1);
+    }
+    .columnSkills {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .columnSkills > h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 100px 0 0 0 !important;
+    }
+    .columnSkills > h2:nth-child(4) {
+      margin-top: 6rem !important;
+    }
+    .columnSkills > h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem !important;
+      font-size: 1.2rem;
+    }
+    .subItems {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem 0 !important;
+    }
+    .subItems > .dataPersonales {
+      display: flex;
+      justify-content: center;
+    }
+    .educacion {
+      padding-left: 3rem !important;
+    }
+    .Logo > img {
+      width: 8rem;
+    }
   }
 </style>

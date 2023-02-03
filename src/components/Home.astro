@@ -22,17 +22,6 @@ import Social from "../Components/res/social.astro";
       <div class="social_2">
         <Social />
       </div>
-      <!-- <div class="social_2">
-        {
-          DataHome.social.map((i) => {
-            return (
-              <a href={i.url} target="_blank">
-                <img src={i.img} class="icon" alt="social" />
-              </a>
-            );
-          })
-        }
-      </div> -->
     </div>
 
     <div class="divHome"></div>
@@ -68,28 +57,12 @@ import Social from "../Components/res/social.astro";
     font-weight: 900;
     padding-right: 50px;
   }
-  /* .movieContainer {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: var(--bg-1);
-    color: var(--cl-5);
-    font-family: var(--font-2);
-    font-size: 350px;
-    font-weight: 900;
-  }
-  .movieContainer div:nth-child(1){
-    display: flex;
-    flex-direction: row-reverse;
-    margin: ;
-  } */
   .dataContainer {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     position: absolute;
-    /* top: 0; */
   }
   .dataSocial {
     width: 50%;
@@ -99,14 +72,6 @@ import Social from "../Components/res/social.astro";
   .divHome {
     width: 50%;
   }
-  /* .backMovie {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 50;
-  } */
   /* ================================================================= */
   .title {
     font-family: var(--font-1);
@@ -150,25 +115,20 @@ import Social from "../Components/res/social.astro";
     padding: 5rem 0 0 10rem !important;
   }
   /* ================================================================= */
-  @media screen and (max-width: 576px) {
+  /* Vierw Tablet */
+  @media only screen and (max-width: 834px) {
+    .homeContainer {
+      height: 70rem;
+    }
     .homeContainer > div:nth-child(1) {
-      font-size: 40vw;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      top: 5vh;
+      font-size: 50vw;
+      top: 3vh;
       left: 2vw;
-      padding-right: 50px;
     }
     .homeContainer > div:nth-child(2) {
       font-size: 60vw;
-      position: absolute;
       left: 20vw;
-      top: 23vh;
-      color: var(--cl-4);
-      font-family: var(--font-2);
-      font-weight: 900;
-      padding-right: 50px;
+      top: 35vh;
     }
     .dataContainer {
       display: flex;
@@ -179,8 +139,43 @@ import Social from "../Components/res/social.astro";
       width: 100%;
       height: 50%;
     }
-    .divHome {
-      height: 30%;
+    .social_1 {
+      padding: 0 0 0 2rem !important;
+    }
+    .title {
+      font-size: 110px;
+      margin-bottom: -20px !important;
+    }
+    .subtitle {
+      font-size: 240px;
+      margin-bottom: -40px !important;
+    }
+    .description {
+      font-size: 60px;
+    }
+    .social_2 {
+      padding: 1rem 10rem !important;
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  /* View Mobile */
+  @media screen and (max-width: 576px) {
+    .homeContainer{
+      height: 55rem;
+    }
+    .homeContainer > div:nth-child(1) {
+      font-size: 50vw;
+      top: 8vh;
+      left: 2vw;
+    }
+    .homeContainer > div:nth-child(2) {
+      font-size: 60vw;
+      left: 20vw;
+      top: 30vh;
     }
     .social_1 {
       width: 100%;
@@ -189,11 +184,11 @@ import Social from "../Components/res/social.astro";
       padding: 0 0 0 2rem !important;
     }
     .title {
-      font-size: 60px;
+      font-size: 65px;
       margin-bottom: -35px !important;
     }
     .subtitle {
-      font-size: 125px;
+      font-size: 135px;
       letter-spacing: 0.5rem;
       margin-bottom: -40px !important;
     }
@@ -201,11 +196,9 @@ import Social from "../Components/res/social.astro";
       font-size: 40px;
     }
     .social_2 {
-      padding: 2rem 0 !important;
+      padding: .1rem 5rem !important;
       height: 40%;
       display: flex;
-      align-items: end;
-      justify-content: center;
     }
   }
 </style>

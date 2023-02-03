@@ -1,8 +1,8 @@
 ---
 import Menu from "../Json/Menu";
 import "../../Styles/root.css";
-import IconOpen from "../../Resource/img/logos/close.svg";
-import IconClose from "../../../public/qr.webp";
+import IconClose from "../../Resource/img/logos/close.svg";
+import IconOpen from "../../Resource/img/logos/open.svg";
 
 interface Props {
   btnTitle: string;
@@ -29,8 +29,8 @@ const { btnTitle } = Astro.props;
   <button class="btnLeng">{btnTitle}</button>
 </div>
 <button class="btnMenu" value="1">
-  <img src="/public/close.svg" id="hbClose" class="active" alt="menu" />
-  <img src="/public/open.svg" id="hbOpen" class="inactive" alt="menu" />
+  <img src={IconClose} id="hbClose" class="active" alt="menu" />
+  <img src={IconOpen} id="hbOpen" class="inactive" alt="menu" />
 </button>
 
 <script>

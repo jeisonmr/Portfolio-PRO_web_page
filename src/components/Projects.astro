@@ -8,19 +8,17 @@ import DataProjects from "./Json/Projects";
   <main class="projects">
     <div class="imgProjects">
       <div class="imgpos">
-      {
-            DataProjects.proyectos.map((i) => {
-            return <img src={i.img} class="imgs"/>
-            })}
+        {
+          DataProjects.proyectos.map((i) => {
+            return <img src={i.img} class="imgs" />;
+          })
+        }
       </div>
     </div>
   </main>
 </section>
 
 <style>
-  /* * {
-    border: 1px solid red;
-  } */
   .projectContainer {
     background-color: var(--bg-3) !important;
     width: 100%;
@@ -41,22 +39,54 @@ import DataProjects from "./Json/Projects";
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(4, auto) ;
+    grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(2, auto);
   }
-  .imgpos{
-      width: 100%;
+  .imgpos {
+    width: 100%;
   }
-.imgs{
-      width: 25%;
-      height: auto;
-      filter: grayscale(1);
-      margin-top: -5px !important;
-      transition: 1s;
-}
-.imgs:hover{
-      filter: grayscale(.1);
-      /* filter: saturate(1); */
-      transition: .4s;
-}
+  .imgs {
+    width: 25%;
+    height: auto;
+    filter: grayscale(1);
+    margin-top: -5px !important;
+    transition: 1s;
+  }
+  .imgs:hover {
+    filter: grayscale(0.1);
+    /* filter: saturate(1); */
+    transition: 0.4s;
+  }
+  /* View Tablet */
+  @media screen and (max-width: 834px) {
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(4, auto);
+    }
+    .imgpos {
+      width: 100%;
+    }
+    .imgs {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .projectContainer > h2{
+      /* text-align: center; */
+      font-size: 55px;
+      margin-left: 30px !important;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      /* grid-template-rows: repeat(4, auto); */
+    }
+    .imgpos {
+      width: 100%;
+    }
+    .imgs {
+      width: 100%;
+    }
+  }
 </style>

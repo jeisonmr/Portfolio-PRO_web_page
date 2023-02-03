@@ -57,12 +57,12 @@ const dataSkills = {
       {
         img: "/public/Resource/img/experiencia/pngg.webp",
         empresa: "PNG Technology Solutions",
-        cargo: "Developer Web Front end",
+        cargo: ["Developer Web Front end"],
       },
       {
         img: "/public/Resource/img/experiencia/freeg.webp",
         empresa: "Freelancer",
-        cargo: "Developer Web Front End, WordPress Developer",
+        cargo: ["Developer Web Front End", "WordPress Developer"],
       },
       {
         img: "/public/Resource/img/experiencia/canadiang.webp",
@@ -72,12 +72,12 @@ const dataSkills = {
       {
         img: "/public/Resource/img/experiencia/jvg.webp",
         empresa: "JV Disingelect",
-        cargo: "Developer Front End, WordPress Developer",
+        cargo: ["Developer Web Front End", "WordPress Developer"],
       },
       {
         img: "/public/Resource/img/experiencia/populig.webp",
         empresa: "Populi",
-        cargo: "WordPress Developer",
+        cargo: ["WordPress Developer"],
       },
     ],
   },
