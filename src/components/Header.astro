@@ -1,0 +1,19 @@
+---
+import "../Styles/root.css";
+import Navbar from "../Components/Navbar.astro";
+---
+
+<header>
+  <Navbar btnTitle="EN" />
+</header>
+
+<style>
+  header {
+    z-index: 200 !important;
+  }
+  @media screen and (max-width: 576px) {
+    header {
+      z-index: 200 !important;
+    }
+  }
+</style>

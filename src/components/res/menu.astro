@@ -11,13 +11,15 @@ const { btnTitle } = Astro.props;
 ---
 
 <!-- Mapeo de items del menu -->
-<div class="menuBarContainer inactive">
+<div class="menuBarContainer">
   <ul class="menuBar">
     {
       Menu.map((i) => {
         return (
           <a href={i.url}>
-            <li class="menuItems">{i.item}</li>
+            <li id="menuItems" class="items">
+              {i.item}
+            </li>
           </a>
         );
       })
@@ -28,35 +30,42 @@ const { btnTitle } = Astro.props;
 
   <button class="btnLeng">{btnTitle}</button>
 </div>
-<button class="btnMenu" value="1">
-  <img src={IconClose} id="hbClose" class="active" alt="menu" />
-  <img src={IconOpen} id="hbOpen" class="inactive" alt="menu" />
+<button id="checkBtn" class="btnMenu" value="0">
+  <img src={IconClose} id="closeMenu" class="" alt="menu" />
+  <img src={IconOpen} id="openMenu" class="inactive" alt="menu" />
 </button>
 
 <script>
-  const button = document.querySelector(".btnMenu");
-  const open = document.getElementById("hbOpen");
-  const close = document.getElementById("hbClose");
+  // Btn Lenguage
+  const menuBtn = document.querySelector(".btnMenu");
+  // Btn Menu
+  const openMenu = document.getElementById("openMenu");
+  const closeMenu = document.getElementById("closeMenu");
   const menu = document.querySelector(".menuBarContainer");
+  const items = document.querySelectorAll(".items");
 
-  button.addEventListener("click", () => {
-    if (button.value == 1) {
-      close.classList.remove("active");
-      close.classList.add("inactive");
-      open.classList.remove("inactive");
-      open.classList.add("active");
-      menu.classList.remove("inactive");
-      menu.classList.add("active");
-      button.value = 0;
-    } else if (button.value == 0) {
-      close.classList.remove("inactive");
-      close.classList.add("active");
-      open.classList.remove("active");
-      open.classList.add("inactive");
-      menu.classList.remove("active");
-      menu.classList.add("inactive");
-      button.value = 1;
+  const toggleMenu = (value) => {
+    if (value == 0) {
+      closeMenu.classList.add("inactive");
+      openMenu.classList.remove("inactive");
+      menu.style.right = "0";
+      menuBtn.value = 1;
+    } else if (value == 1) {
+      closeMenu.classList.remove("inactive");
+      openMenu.classList.add("inactive");
+      menu.style.right = "-32rem";
+      menuBtn.value = 0;
     }
+  };
+  // Boton del menu desplegable
+  menuBtn.addEventListener("click", () => {
+    toggleMenu(menuBtn.value);
+  });
+  // Items del menu
+  items.forEach(i =>{
+    i.addEventListener("click", () => {
+      toggleMenu(menuBtn.value);
+    })
   });
 </script>
 
@@ -64,6 +73,8 @@ const { btnTitle } = Astro.props;
   .menuBarContainer {
     display: flex;
     flex-direction: row;
+    animation: listMenu 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: .8s;
   }
   .menuBar {
     width: 100%;
@@ -84,19 +95,22 @@ const { btnTitle } = Astro.props;
   .menuBar a {
     position: relative;
   }
-  .menuItems {
+  #menuItems {
     color: var(--cl-2);
   }
-  .menuItems:hover,
-  .menuItems:focus {
+  #menuItems:hover,
+  a li:active {
     color: var(--cl-1);
   }
-  .menuItems:hover::before {
+  a > li.active {
+    color: var(--cl-7);
+  }
+  #menuItems:hover::before {
     opacity: 1;
     transform: none;
     visibility: visible;
   }
-  .menuItems::before {
+  #menuItems::before {
     position: absolute;
     content: "";
     bottom: -8px;
@@ -123,26 +137,30 @@ const { btnTitle } = Astro.props;
     background-color: var(--bg-5);
     border-radius: 10px;
     border: none;
-    transition: .5s;
+    transition: 0.5s;
   }
   .btnLeng:hover {
-    /* background-color: var(--bg-6); */
-    /* background: #991C36; */
-    background: #FFBF00;
+    background: #ffbf00;
     color: var(--cl-1);
-    transition: .5s;
+    transition: 0.5s;
   }
   .btnMenu {
     display: none;
   }
-
+  .separator {
+    color: var(--cl-2);
+  }
+  @keyframes listMenu {
+  0% {transform: translateX(500px);}
+  100% {transform: translateX(0px);}
+}
   /* Media Queries */
   @media screen and (max-width: 576px) {
     .menuBar {
       display: flex;
       flex-direction: column;
       position: relative;
-      z-index: 190;
+      z-index: 200;
     }
     .menuItems {
       text-align: right;
@@ -150,22 +168,23 @@ const { btnTitle } = Astro.props;
       z-index: 200;
     }
     .menuBarContainer {
-      width: 150px;
+      width: 100vw;
       height: 180px;
+      position: fixed;
+      background-color: var(--bg-3);
+      top: 3.7rem;
+      right: -32rem;
       display: flex;
       flex-direction: column;
       gap: 20px;
-      position: absolute;
-      top: 100px;
-      right: 1px;
       justify-content: right;
       align-items: center;
+      padding: 10px 0 !important;
+      transition-duration: 0.4s;
+      z-index: 10 !important;
     }
     .separator {
       display: none;
-    }
-    .active {
-      display: flex;
     }
     .inactive {
       display: none;
@@ -176,6 +195,10 @@ const { btnTitle } = Astro.props;
       height: 100%;
       display: flex;
       background-color: var(--bg-2);
+    }
+    #checkBtn:checked ~ ul {
+      right: 0 !important;
+      transition: all 0.5s;
     }
   }
 </style>

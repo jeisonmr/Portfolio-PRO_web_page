@@ -1,32 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
-:root{
-/* Backgrounds */
---bg-1: #000000;
---bg-2: #181818;
---bg-3: #1D1D1D;
---bg-4: #262626;
---bg-5: #FFFFFF;
---bg-6: #d3d3d3;
+:root {
+  /* Backgrounds */
+  --bg-1: #000000;
+  --bg-2: #181818;
+  --bg-3: #1d1d1d;
+  --bg-4: #262626;
+  --bg-5: #ffffff;
+  --bg-6: #d3d3d3;
 
-/* Fonts*/
---font-1: 'Barlow', sans-serif;
---font-2: 'Staatliches', cursive;
---font-3: 'Gruppo', cursive;
---font-4: 'Jura', sans-serif;
+  /* Fonts*/
+  --font-1: "Barlow", sans-serif;
+  --font-2: "Staatliches", cursive;
+  --font-3: "Gruppo", cursive;
+  --font-4: "Jura", sans-serif;
 
-/* Colors */
---cl-1: #FFFFFF;
---cl-2: #C4C4C4;
---cl-3: #000000;
---cl-4: #181818;
---cl-5: #1D1D1D;
---cl-6: #262626;
+  /* Colors */
+  --cl-1: #ffffff;
+  --cl-2: #c4c4c4;
+  --cl-3: #000000;
+  --cl-4: #181818;
+  --cl-5: #1d1d1d;
+  --cl-6: #262626;
+  --cl-7: #ffbe01;
+}
+html {
+  scroll-behavior: smooth !important;
+}
+header {
+  z-index: 200 !important;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--bg-4);
 }
 
+body::-webkit-scrollbar-thumb {
+  background-color: var(--bg-3);
+  border-radius: 1px;
+  animation-name: fondo;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  /* border: 3px solid orange;  */
+}
+@keyframes fondo {
+      0% {background-color: var(--bg-1);}
+      25%{background-color: var(--bg-2);}
+      50%{background-color: var(--bg-3);}
+      75%{background-color: var(--bg-4);}
+      100% {background-color: var(--bg-5);}
+    }
 /*
 xs <576px = Celulares
 sm ≥576px = Tablet

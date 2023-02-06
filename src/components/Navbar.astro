@@ -2,7 +2,7 @@
 import Logo from "../Components/res/logo.astro";
 import Menu from "../Components/res/menu.astro";
 import BtnLeng from "../Components/res/es-en.astro";
-import '../Styles/root.css'
+import "../Styles/root.css";
 
 interface Props {
   btnTitle: string;
@@ -29,10 +29,15 @@ const { btnTitle } = Astro.props;
     background-color: var(--bg-2);
     position: fixed !important;
     z-index: 200;
+    animation: header 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: .5s;
   }
   .logoContianer {
     width: 40px;
     height: 40px;
+    animation-name: logo;
+    animation: logo 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: .8s;
   }
   .menuContainer {
     display: flex;
@@ -42,14 +47,23 @@ const { btnTitle } = Astro.props;
   .menuDesktop {
     display: none;
   }
+  @keyframes logo {
+  0% {transform: translateX(-100px);}
+  100% {transform: translateX(2px);}
+}
+@keyframes header {
+  0% {transform: translateY(-100px);}
+  100% {transform: translateY(0px);}
 /* ================================================================= */
   @media screen and (max-width: 576px) {
-    .navBar{
+    .navBar {
       width: 100% !important;
+      z-index: 200;
     }
     .menuContainer {
       display: flex;
       flex-direction: column;
+      z-index: 100;
     }
   }
 </style>
