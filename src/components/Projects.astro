@@ -4,7 +4,13 @@ import DataProjects from "./Json/Projects";
 ---
 
 <section id="project" class="projectContainer">
-  <h2>{DataProjects.titulo}</h2>
+  <h2>
+    {
+      DataProjects.titulo.map((i) => {
+        return <span class="effectText">{i}</span>;
+      })
+    }
+  </h2>
   <main class="projects">
     <div class="imgProjects">
       <div class="imgpos">
@@ -72,7 +78,7 @@ import DataProjects from "./Json/Projects";
     }
   }
   @media screen and (max-width: 576px) {
-    .projectContainer > h2{
+    .projectContainer > h2 {
       /* text-align: center; */
       font-size: 55px;
       margin-left: 30px !important;

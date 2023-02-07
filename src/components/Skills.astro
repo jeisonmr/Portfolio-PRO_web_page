@@ -5,14 +5,20 @@ import DataSkills from "./Json/Skills";
 
 <section id="skill" class="skillsContainer">
   <main class="columnSkills col1">
-    <h2 class="lenguaje">{DataSkills.habilidades.titulo}</h2>
+    <h2 class="lenguaje">
+      {
+        DataSkills.habilidades.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
     <h3>{DataSkills.habilidades.subt1}</h3>
     <div class="lenguajes">
       {
         DataSkills.habilidades.lenguajes.map((i) => {
           return (
             <div class="items">
-              <img src={i.img} alt="" />
+              <img class="allEffect" src={i.img} alt="" />
               <p>{i.lenguaje}</p>
             </div>
           );
@@ -47,7 +53,13 @@ import DataSkills from "./Json/Skills";
     </div>
   </main>
   <main class="columnSkills col2">
-    <h2>{DataSkills.experiencias.titulo}</h2>
+    <h2>
+      {
+        DataSkills.experiencias.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
     <h3>Han confiado en mi</h3>
     <div class="experiencias">
       {
@@ -64,7 +76,13 @@ import DataSkills from "./Json/Skills";
         })
       }
     </div>
-    <h2>{DataSkills.educacion.titulo}</h2>
+    <h2>
+      {
+        DataSkills.educacion.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
     <h3></h3>
     <div class="educacion">
       {
@@ -80,14 +98,26 @@ import DataSkills from "./Json/Skills";
     </div>
   </main>
   <main class="columnSkills col3">
-    <h2>{DataSkills.personales.titulo}</h2>
+    <h2>
+      {
+        DataSkills.personales.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
     <h3></h3>
     <div class="hPersonales">
       <div class="subItems">
         <p class="dataPersonales">{DataSkills.personales.descripcion}</p>
       </div>
     </div>
-    <h2>{DataSkills.hobbies.titulo}</h2>
+    <h2>
+      {
+        DataSkills.hobbies.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
     <h3></h3>
     <div class="hobbies">
       <div class="hobbiesGrid">
@@ -243,8 +273,7 @@ import DataSkills from "./Json/Skills";
     .Logo > img {
       width: 8rem;
     }
-    .col1 > div{
-      
+    .col1 > div {
     }
     .col3 {
       width: 100% !important;
@@ -252,7 +281,7 @@ import DataSkills from "./Json/Skills";
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
+
       /* text-align: center; */
     }
   }

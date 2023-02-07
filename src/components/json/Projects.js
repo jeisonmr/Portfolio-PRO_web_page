@@ -1,5 +1,5 @@
 const dataProjects = {
-  titulo: "PROYECTOS PROFESIONALES",
+  titulo: ["P","R","O","Y","E","C","T","O","S"],
   botones: ["All", "Frameworks", "Vanilla", "WordPress"],
   proyectos: [
     {

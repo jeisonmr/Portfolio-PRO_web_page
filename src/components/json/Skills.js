@@ -1,6 +1,6 @@
 const dataSkills = {
   habilidades: {
-    titulo: "HABILIDADES",
+    titulo: ["H","A","B","I","L","I","D","A","D","E","S"],
     subt1: "Lenguajes",
     lenguajes: [
       {
@@ -52,7 +52,7 @@ const dataSkills = {
     ],
   },
   experiencias: {
-    titulo: "EXPERIENCIA",
+    titulo: ["E","X","P","E","R","I","E","N","C","I","A"],
     experiencia: [
       {
         img: "/public/Resource/img/experiencia/pngg.webp",
@@ -82,7 +82,7 @@ const dataSkills = {
     ],
   },
   educacion: {
-    titulo: "EDUCACIÓN",
+    titulo: ["E","D","U","C","A","C","I","Ó","N"],
     profesional: [
       {
         titulado: "Ingeniero de sistemas",
@@ -99,11 +99,11 @@ const dataSkills = {
     ],
   },
   personales: {
-    titulo: "H. PERSONALES",
+    titulo: ["H.","P","E","R","S","O","N","A","L","E","S"],
     descripcion: "Organizado - Trabajo en equipo - Profesional",
   },
   hobbies: {
-    titulo: "HOBBIES",
+    titulo: ["H","O","B","B","I","E","S"],
     hobbies: [
       {
         titulo: "Playa",

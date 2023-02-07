@@ -1,9 +1,9 @@
 const dataHome = {
-  title: "JEISON",
-  subtitle: "MUÑOZ",
+  title: ["J","E","I","S","O","N"],
+  subtitle: ["M","U","Ñ","O","Z"],
   description: [
-    "Front End DEV",
-    // "WordPress developer"
+    "Front End Developer",
+    // "WordPress Developer"
   ],
   video: "../../Resource/vid/vBannerDesktop.webm",
 };

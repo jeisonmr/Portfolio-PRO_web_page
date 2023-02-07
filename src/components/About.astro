@@ -7,12 +7,20 @@ import DataAbout from "./Json/About";
   <div class="component">{DataAbout.componente}</div>
   <div class="contentContainer">
     <div class="dataContainer">
-      <p class="title">{DataAbout.titulo}</p>
+      <p class="title">{DataAbout.titulo.map((i) => {
+        return(
+          <span class="effectText">{i}</span>
+        )
+      })}</p>
       <p class="description">{DataAbout.descripcion}</p>
       <p class="ubication">{DataAbout.ubicacion}</p>
     </div>
     <div class="animationContainer">
-      <img class="qr" src={DataAbout.qr} alt="QR" />
+      <div class="qrContainer">
+        <a href={DataAbout.url}
+          ><img class="qr" src={DataAbout.qr} alt="QR" /></a
+        >
+      </div>
     </div>
   </div>
 </section>
@@ -45,6 +53,7 @@ import DataAbout from "./Json/About";
     position: relative;
     z-index: 50;
   }
+
   .qr {
     width: 100px;
     position: absolute;
@@ -159,7 +168,7 @@ import DataAbout from "./Json/About";
       width: 100% !important;
       height: 100% !important;
       display: flex;
-      background: linear-gradient( 15deg, #181818 0%, #181818 50%, #262626 50%);
+      background: linear-gradient(15deg, #181818 0%, #181818 50%, #262626 50%);
     }
     .dataContainer {
       padding: 5rem 2rem !important;
