@@ -49,6 +49,10 @@ const dataSkills = {
         img: "/public/Resource/img/habilidades/divig.webp",
         plugin: "Divi",
       },
+      {
+        img: "/public/Resource/img/habilidades/woog.webp",
+        plugin: "WooCommerce",
+      },
     ],
   },
   experiencias: {

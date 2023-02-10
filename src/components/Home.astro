@@ -1,9 +1,10 @@
 ---
 import DataHome from "./Json/Home";
 import Social from "../Components/res/social.astro";
+
 ---
 
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 
 <section id="home swarm" class="homeContainer">
   <div class="effectComponent">WEB</div>
@@ -26,11 +27,7 @@ import Social from "../Components/res/social.astro";
           }
         </p>
         <div class="contenedor">
-          {
-            DataHome.description.map((i) => {
-              return <p class="description">{i}</p>;
-            })
-          }
+          <p class="description" id="byWrite"></p>
         </div>
       </div>
       <div class="social_2">
@@ -42,15 +39,8 @@ import Social from "../Components/res/social.astro";
   </div>
 </section>
 
-<script>
-  const componentes = document.querySelectorAll('.effectComponent');
-  componentes.addEventListener('mouseover', ()=>{
-    componentes.style.transform = "translateY(2)";
-  })
-</script>
-
 <style>
-  .effectComponent:hover{
+  .effectComponent:hover {
     transform: translateY(2);
   }
   .homeContainer {
