@@ -49,7 +49,6 @@ body::-webkit-scrollbar-thumb {
   animation-name: fondo;
   animation-iteration-count: infinite;
   animation-duration: 1s;
-  /* border: 3px solid orange;  */
 }
 
 .effectText{

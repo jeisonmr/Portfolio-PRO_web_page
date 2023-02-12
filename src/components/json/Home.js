@@ -4,8 +4,7 @@ const dataHome = {
   description: [
     "Front End Developer",
     // "WordPress Developer"
-  ],
-  video: "../../Resource/vid/vBannerDesktop.webm",
+  ]
 };
 
 export default dataHome;

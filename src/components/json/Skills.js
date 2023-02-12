@@ -1,56 +1,81 @@
+import html from "/public/Resource/img/habilidades/htmlg.webp";
+import css from "/public/Resource/img/habilidades/cssg.webp";
+import javascript from "/public/Resource/img/habilidades/jsg.webp";
+import typescript from "/public/Resource/img/habilidades/tsg.webp";
+// ----------------------------------------------------------------
+import react from "/public/Resource/img/habilidades/Reactg.webp";
+import bootstrap from "/public/Resource/img/habilidades/bootstrapg.webp";
+import astro from "/public/Resource/img/habilidades/astrog.webp";
+// ----------------------------------------------------------------
+import wordpress from "/public/Resource/img/habilidades/wpg.webp";
+import elementor from "/public/Resource/img/habilidades/elementorg.webp"
+import divi from "/public/Resource/img/habilidades/divig.webp";
+import woocommerce from "/public/Resource/img/habilidades/woog.webp";
+// ----------------------------------------------------------------
+import png from "/public/Resource/img/experiencia/pngg.webp";
+import freelancer from "/public/Resource/img/experiencia/freeg.webp";
+import canadian from "/public/Resource/img/experiencia/canadiang.webp";
+import jv from "/public/Resource/img/experiencia/jvg.webp";
+import populi from "/public/Resource/img/experiencia/populig.webp";
+// ----------------------------------------------------------------
+import playa from "/public/Resource/img/hobbies/playag.webp";
+import cine from "/public/Resource/img/hobbies/cineg.webp";
+import gym from "/public/Resource/img/hobbies/gymg.webp";
+import estudio from "/public/Resource/img/hobbies/codeg.webp";
+
 const dataSkills = {
   habilidades: {
     titulo: ["H","A","B","I","L","I","D","A","D","E","S"],
     subt1: "Lenguajes",
     lenguajes: [
       {
-        img: "/public/Resource/img/habilidades/htmlg.webp",
+        img: html,
         lenguaje: "HTML",
       },
       {
-        img: "/public/Resource/img/habilidades/cssg.webp",
+        img: css,
         lenguaje: "CSS",
       },
       {
-        img: "/public/Resource/img/habilidades/jsg.webp",
+        img: javascript,
         lenguaje: "JavaScript",
       },
       {
-        img: "/public/Resource/img/habilidades/tsg.webp",
+        img: typescript,
         lenguaje: "TypeScript",
       },
     ],
     subt2: "Frameworks",
     frameworks: [
       {
-        img: "/public/Resource/img/habilidades/Reactg.webp",
+        img: react,
         framework: "React",
       },
       {
-        img: "/public/Resource/img/habilidades/bootstrapg.webp",
+        img: bootstrap,
         framework: "Bootstrap",
       },
       {
-        img: "/public/Resource/img/habilidades/astrog.webp",
+        img: astro,
         framework: "Astro",
       },
     ],
     subt3: "C M S",
     plugins: [
       {
-        img: "/public/Resource/img/habilidades/wpg.webp",
+        img: wordpress,
         plugin: "WordPress",
       },
       {
-        img: "/public/Resource/img/habilidades/elementorg.webp",
+        img: elementor,
         plugin: "Elementor",
       },
       {
-        img: "/public/Resource/img/habilidades/divig.webp",
+        img: divi,
         plugin: "Divi",
       },
       {
-        img: "/public/Resource/img/habilidades/woog.webp",
+        img: woocommerce,
         plugin: "WooCommerce",
       },
     ],
@@ -59,27 +84,27 @@ const dataSkills = {
     titulo: ["E","X","P","E","R","I","E","N","C","I","A"],
     experiencia: [
       {
-        img: "/public/Resource/img/experiencia/pngg.webp",
+        img: png,
         empresa: "PNG Technology Solutions",
         cargo: ["Developer Web Front end"],
       },
       {
-        img: "/public/Resource/img/experiencia/freeg.webp",
+        img: freelancer,
         empresa: "Freelancer",
         cargo: ["Developer Web Front End", "WordPress Developer"],
       },
       {
-        img: "/public/Resource/img/experiencia/canadiang.webp",
+        img: canadian,
         empresa: "Canadian PVC",
         cargo: "Development Engineer",
       },
       {
-        img: "/public/Resource/img/experiencia/jvg.webp",
+        img: jv,
         empresa: "JV Disingelect",
         cargo: ["Developer Web Front End", "WordPress Developer"],
       },
       {
-        img: "/public/Resource/img/experiencia/populig.webp",
+        img: populi,
         empresa: "Populi",
         cargo: ["WordPress Developer"],
       },
@@ -111,19 +136,19 @@ const dataSkills = {
     hobbies: [
       {
         titulo: "Playa",
-        imagen: "/public/Resource/img/hobbies/playag.webp",
+        imagen: playa,
       },
       {
         titulo: "Cine",
-        imagen: "/public/Resource/img/hobbies/cineg.webp",
+        imagen: cine,
       },
       {
         titulo: "GyM",
-        imagen: "/public/Resource/img/hobbies/gymg.webp",
+        imagen: gym,
       },
       {
         titulo: "Estudio",
-        imagen: "/public/Resource/img/hobbies/codeg.webp",
+        imagen: estudio,
       },
     ],
   },

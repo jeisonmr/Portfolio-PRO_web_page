@@ -1,14 +1,12 @@
 ---
 import DataHome from "./Json/Home";
 import Social from "../Components/res/social.astro";
-
 ---
 
-
-
-<section id="home swarm" class="homeContainer">
-  <div class="effectComponent">WEB</div>
-  <div class="effectComponent">DEVELOPER</div>
+<section id="home" class="homeContainer">
+  <div class="webContent">WEB</div>
+  <div class="developerContent Desktop">DEVELOPER</div>
+  <div class="devContent">DEV</div>
   <div class="dataContainer">
     <div class="dataSocial">
       <div class="social_1">
@@ -40,8 +38,12 @@ import Social from "../Components/res/social.astro";
 </section>
 
 <style>
-  .effectComponent:hover {
-    transform: translateY(2);
+
+  .Desktop {
+    display: block;
+  }
+  .Smart {
+    display: none;
   }
   .homeContainer {
     width: 100%;
@@ -51,7 +53,7 @@ import Social from "../Components/res/social.astro";
     z-index: 100;
     box-shadow: var(--cl-7);
   }
-  .homeContainer > div:nth-child(1) {
+  .webContent {
     position: absolute;
     right: 2vw;
     color: var(--cl-4);
@@ -60,7 +62,7 @@ import Social from "../Components/res/social.astro";
     font-weight: 900;
     padding-right: 50px;
   }
-  .homeContainer > div:nth-child(2) {
+  .developerContent {
     position: absolute;
     left: 2vw;
     bottom: 0;
@@ -69,6 +71,17 @@ import Social from "../Components/res/social.astro";
     font-family: var(--font-2);
     font-weight: 900;
     padding-right: 50px;
+  }
+  .devContent {
+    position: absolute;
+    left: 2vw;
+    bottom: 0;
+    color: var(--cl-4);
+    font-size: 23vw;
+    font-family: var(--font-2);
+    font-weight: 900;
+    padding-right: 50px;
+    display: none;
   }
   .dataContainer {
     width: 100%;
@@ -131,18 +144,26 @@ import Social from "../Components/res/social.astro";
   /* ================================================================= */
   /* Vierw Tablet */
   @media only screen and (max-width: 834px) {
+  
     .homeContainer {
       height: 70rem;
     }
-    .homeContainer > div:nth-child(1) {
+    .webContent {
       font-size: 50vw;
       top: 3vh;
       left: 2vw;
     }
-    .homeContainer > div:nth-child(2) {
+    .developerContent {
       font-size: 60vw;
       left: 20vw;
       top: 35vh;
+      display: none;
+    }
+    .devContent {
+      font-size: 60vw;
+      left: 20vw;
+      top: 35vh;
+      display: block;
     }
     .dataContainer {
       display: flex;
@@ -181,15 +202,22 @@ import Social from "../Components/res/social.astro";
     .homeContainer {
       height: 55rem;
     }
-    .homeContainer > div:nth-child(1) {
+    .webContent {
       font-size: 50vw;
-      top: 8vh;
+      top: 3vh;
       left: 2vw;
     }
-    .homeContainer > div:nth-child(2) {
+    .developerContent {
       font-size: 60vw;
       left: 20vw;
-      top: 30vh;
+      top: 35vh;
+      display: none;
+    }
+    .devContent {
+      font-size: 55vw;
+      left: 20vw;
+      top: 26vh;
+      display: block;
     }
     .social_1 {
       width: 100%;
@@ -198,11 +226,11 @@ import Social from "../Components/res/social.astro";
       padding: 0 0 0 2rem !important;
     }
     .title {
-      font-size: 65px;
+      font-size: 20vw;
       margin-bottom: -35px !important;
     }
     .subtitle {
-      font-size: 135px;
+      font-size: 35vw;
       letter-spacing: 0.5rem;
       margin-bottom: -40px !important;
     }
