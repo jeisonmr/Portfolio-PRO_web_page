@@ -1,11 +1,12 @@
 import html from "/public/Resource/img/habilidades/htmlg.webp";
 import css from "/public/Resource/img/habilidades/cssg.webp";
-import javascript from "/public/Resource/img/habilidades/jsg.webp";
-import typescript from "/public/Resource/img/habilidades/tsg.webp";
+import javascript from "/public/Resource/img/habilidades/javascriptg.webp";
+import typescript from "/public/Resource/img/habilidades/typescriptg.webp";
 // ----------------------------------------------------------------
 import react from "/public/Resource/img/habilidades/Reactg.webp";
 import bootstrap from "/public/Resource/img/habilidades/bootstrapg.webp";
 import astro from "/public/Resource/img/habilidades/astrog.webp";
+import tailwindcss from "/public/Resource/img/habilidades/tailwindcssg.webp";
 // ----------------------------------------------------------------
 import wordpress from "/public/Resource/img/habilidades/wpg.webp";
 import elementor from "/public/Resource/img/habilidades/elementorg.webp"
@@ -52,12 +53,16 @@ const dataSkills = {
         framework: "React",
       },
       {
+        img: astro,
+        framework: "Astro",
+      },
+      {
         img: bootstrap,
         framework: "Bootstrap",
       },
       {
-        img: astro,
-        framework: "Astro",
+        img: tailwindcss,
+        framework: "TailwindCSS",
       },
     ],
     subt3: "C M S",
@@ -118,8 +123,8 @@ const dataSkills = {
         cartificado: "Politecnico de la Costa Atlantica",
       },
       {
-        titulado: "SCRUM Foundation",
-        cartificado: "CertiProf",
+        tituladoo: "SCRUM Foundation",
+        cartificadoo: "CertiProf",
       },
       {
         tituladoo: "Magister Ingenieria y Computo",
