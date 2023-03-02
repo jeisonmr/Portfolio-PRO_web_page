@@ -5,6 +5,7 @@ interface Props {
 const { title } = Astro.props;
 // Styles
 import "../styles/layout.css";
+import favicon from "/public/Resource/img/logos/favicon.webp";
 ---
 
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ import "../styles/layout.css";
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/public/Resource/img/logos/favicon.webp"/>
+    <link rel="icon" type="image/x-icon" href={favicon}/>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
     <title>Jeison Muñoz | {title}</title>

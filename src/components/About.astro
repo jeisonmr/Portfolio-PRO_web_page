@@ -13,6 +13,7 @@ import DataAbout from "./Json/About";
         )
       })}</p>
       <p class="description">{DataAbout.descripcion}</p>
+      <p class="subdescription">{DataAbout.subdescription}</p>
       <p class="ubication">{DataAbout.ubicacion}</p>
     </div>
     <div class="animationContainer">
@@ -28,7 +29,7 @@ import DataAbout from "./Json/About";
 <style>
   .aboutContainer {
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: var(--bg-4);
     display: flex;
     flex-direction: row;
@@ -36,13 +37,13 @@ import DataAbout from "./Json/About";
   }
   .contentContainer {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     background: linear-gradient(90deg, #181818 0%, #181818 50%, #262626 50%);
   }
   .dataContainer {
     width: 50%;
-    height: 100%;
+    height: auto;
     position: relative;
     padding: 22vh 60px 0 100px !important;
     z-index: 50;
@@ -84,6 +85,17 @@ import DataAbout from "./Json/About";
     margin-top: 10vh !important;
     position: relative;
   }
+  .subdescription {
+    color: var(--cl-1);
+    font-family: var(--font-1);
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+    z-index: 150;
+    margin-top: 5vh !important;
+    margin-bottom: 20vh !important;
+    position: relative;
+  }
   .ubication {
     color: var(--cl-1);
     font-family: var(--font-1);
@@ -106,14 +118,14 @@ import DataAbout from "./Json/About";
   /* View Tablet */
   @media only screen and (max-width: 834px) {
     .aboutContainer {
-      height: 50rem;
+      height: auto;
       display: flex;
       flex-direction: row;
       position: relative;
     }
     .contentContainer {
       width: 100%;
-      height: 100%;
+      height: auto;
       display: flex;
       background: linear-gradient(90deg, #181818 0%, #181818 50%, #262626 50%);
     }
@@ -147,6 +159,17 @@ import DataAbout from "./Json/About";
       font-size: 22px;
       margin-top: 3vh !important;
     }
+    .subdescription {
+    color: var(--cl-1);
+    font-family: var(--font-1);
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+    z-index: 150;
+    margin-top: 5vh !important;
+    margin-bottom: 20vh !important;
+    position: relative;
+  }
     .ubication {
       bottom: 2rem;
       left: 8rem;
@@ -159,14 +182,14 @@ import DataAbout from "./Json/About";
   }
   @media only screen and (max-width: 576px) {
     .aboutContainer {
-      height: 50rem;
+      height: auto;
       display: flex;
       flex-direction: row;
       position: relative;
     }
     .contentContainer {
       width: 100% !important;
-      height: 100% !important;
+      height: auto !important;
       display: flex;
       background: linear-gradient(15deg, #181818 0%, #181818 50%, #262626 50%);
     }
@@ -185,6 +208,17 @@ import DataAbout from "./Json/About";
       font-size: 22px;
       margin-top: 3vh !important;
     }
+    .subdescription {
+    color: var(--cl-1);
+    font-family: var(--font-1);
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+    z-index: 150;
+    margin-top: 5vh !important;
+    margin-bottom: 20vh !important;
+    position: relative;
+  }
     .ubication {
       bottom: 2rem;
       left: 8rem;

@@ -51,6 +51,19 @@ import DataSkills from "./Json/Skills";
         })
       }
     </div>
+    <h3>{DataSkills.habilidades.subt4}</h3>
+    <div class="frameworks">
+      {
+        DataSkills.habilidades.management.map((i) => {
+          return (
+            <div class="items">
+              <img src={i.img} alt="" />
+              <p>{i.plugin}</p>
+            </div>
+          );
+        })
+      }
+    </div>
   </main>
   <main class="columnSkills col2">
     <h2>
@@ -68,8 +81,8 @@ import DataSkills from "./Json/Skills";
             <div class="items">
               <img src={i.img} alt="" />
               <div class="subItems">
-                <p>{i.empresa}</p>
-                <span>{i.cargo}</span>
+                <h4>{i.empresa}</h4>
+                <p>{i.cargo}</p>
               </div>
             </div>
           );
@@ -89,8 +102,8 @@ import DataSkills from "./Json/Skills";
         DataSkills.educacion.profesional.map((i) => {
           return (
             <div class="subItems">
-              <p>{i.titulado}</p>
-              <span>{i.cartificado}</span>
+              <h4>{i.titulado}</h4>
+              <p>{i.cartificado}</p>
             </div>
           );
         })
@@ -108,7 +121,7 @@ import DataSkills from "./Json/Skills";
     <h3></h3>
     <div class="hPersonales">
       <div class="subItems">
-        <p class="dataPersonales">{DataSkills.personales.descripcion}</p>
+        <h4 class="dataPersonales">{DataSkills.personales.descripcion}</h4>
       </div>
     </div>
     <h2>
@@ -189,16 +202,16 @@ import DataSkills from "./Json/Skills";
     font-size: 17px;
     letter-spacing: 2px;
   }
-  .subItems > p {
+  .subItems > h4 {
     font-family: var(--font-2);
     font-weight: 100;
     font-size: 17px;
     letter-spacing: 2px;
   }
-  .subItems > span {
+  .subItems > p {
     font-family: var(--font-3);
     font-weight: 100;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing: 2px;
   }
   .hobbiesGrid {

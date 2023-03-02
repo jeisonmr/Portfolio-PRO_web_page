@@ -1,5 +1,6 @@
 import html from "/public/Resource/img/habilidades/htmlg.webp";
 import css from "/public/Resource/img/habilidades/cssg.webp";
+import sass from "/public/Resource/img/habilidades/sassg.webp"
 import javascript from "/public/Resource/img/habilidades/javascriptg.webp";
 import typescript from "/public/Resource/img/habilidades/typescriptg.webp";
 // ----------------------------------------------------------------
@@ -7,6 +8,15 @@ import react from "/public/Resource/img/habilidades/Reactg.webp";
 import bootstrap from "/public/Resource/img/habilidades/bootstrapg.webp";
 import astro from "/public/Resource/img/habilidades/astrog.webp";
 import tailwindcss from "/public/Resource/img/habilidades/tailwindcssg.webp";
+// ----------------------------------------------------------------
+import azure from "/public/Resource/img/habilidades/azureg.webp";
+import git from "/public/Resource/img/habilidades/gitg.webp";
+import github from "/public/Resource/img/habilidades/githubg.webp";
+import sourcetree from "/public/Resource/img/habilidades/sourcetreeg.webp";
+import jira from "/public/Resource/img/habilidades/jirag.webp";
+import trello from "/public/Resource/img/habilidades/trellog.webp";
+import slack from "/public/Resource/img/habilidades/codeg.webp"
+
 // ----------------------------------------------------------------
 import wordpress from "/public/Resource/img/habilidades/wpg.webp";
 import elementor from "/public/Resource/img/habilidades/elementorg.webp"
@@ -23,6 +33,7 @@ import playa from "/public/Resource/img/hobbies/playag.webp";
 import cine from "/public/Resource/img/hobbies/cineg.webp";
 import gym from "/public/Resource/img/hobbies/gymg.webp";
 import estudio from "/public/Resource/img/hobbies/codeg.webp";
+import logo from "/public/Resource/img/logos/jm.webp";
 
 const dataSkills = {
   habilidades: {
@@ -36,6 +47,10 @@ const dataSkills = {
       {
         img: css,
         lenguaje: "CSS",
+      },
+      {
+        img: sass,
+        lenguaje: "Sass",
       },
       {
         img: javascript,
@@ -84,6 +99,37 @@ const dataSkills = {
         plugin: "WooCommerce",
       },
     ],
+    subt4: "Management",
+    management: [
+      {
+        img: azure,
+        plugin: "Azure Devops",
+      },
+      {
+        img: git,
+        plugin: "Git",
+      },
+      {
+        img: github,
+        plugin: "GitHub",
+      },
+      {
+        img: sourcetree,
+        plugin: "Sourcetree",
+      },
+      {
+        img: jira,
+        plugin: "Trello",
+      },
+      {
+        img: trello,
+        plugin: "Trello",
+      },
+      {
+        img: slack,
+        plugin: "Slack",
+      },
+    ],
   },
   experiencias: {
     titulo: ["E","X","P","E","R","I","E","N","C","I","A"],
@@ -96,7 +142,7 @@ const dataSkills = {
       {
         img: freelancer,
         empresa: "Freelancer",
-        cargo: ["Developer Web Front End", "WordPress Developer"],
+        cargo: ["Developer Web Front End,  ", "WordPress Design"],
       },
       {
         img: canadian,
@@ -106,12 +152,12 @@ const dataSkills = {
       {
         img: jv,
         empresa: "JV Disingelect",
-        cargo: ["Developer Web Front End", "WordPress Developer"],
+        cargo: ["Developer Web Front End,  ", " WordPress Design"],
       },
       {
         img: populi,
         empresa: "Populi",
-        cargo: ["WordPress Developer"],
+        cargo: ["WordPress Design"],
       },
     ],
   },
@@ -157,7 +203,7 @@ const dataSkills = {
       },
     ],
   },
-  logotipo: "/public/Resource/img/logos/jm.webp",
+  logotipo: logo
 };
 
 export default dataSkills;
