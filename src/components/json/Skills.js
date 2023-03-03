@@ -119,7 +119,7 @@ const dataSkills = {
       },
       {
         img: jira,
-        plugin: "Trello",
+        plugin: "Jira",
       },
       {
         img: trello,
