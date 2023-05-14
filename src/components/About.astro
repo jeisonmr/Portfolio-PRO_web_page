@@ -1,26 +1,30 @@
 ---
 import "../Styles/root.css";
 import DataAbout from "./Json/About";
+import SocialContact from "./res/socialContact.astro";
 ---
 
 <section id="about" class="aboutContainer">
   <div class="component">{DataAbout.componente}</div>
   <div class="contentContainer">
     <div class="dataContainer">
-      <p class="title">{DataAbout.titulo.map((i) => {
-        return(
-          <span class="effectText">{i}</span>
-        )
-      })}</p>
+      <p class="title">
+        {
+          DataAbout.titulo.map((i) => {
+            return <span class="effectText">{i}</span>;
+          })
+        }
+      </p>
       <p class="description">{DataAbout.descripcion}</p>
       <p class="subdescription">{DataAbout.subdescription}</p>
       <p class="ubication">{DataAbout.ubicacion}</p>
     </div>
     <div class="animationContainer">
+      <SocialContact/>
       <div class="qrContainer">
-        <a href={DataAbout.url}
+        <!-- <a href={DataAbout.url}
           ><img class="qr" src={DataAbout.qr} alt="QR" /></a
-        >
+        > -->
       </div>
     </div>
   </div>
@@ -160,16 +164,16 @@ import DataAbout from "./Json/About";
       margin-top: 3vh !important;
     }
     .subdescription {
-    color: var(--cl-1);
-    font-family: var(--font-1);
-    font-size: 20px;
-    font-weight: 100;
-    text-align: justify;
-    z-index: 150;
-    margin-top: 5vh !important;
-    margin-bottom: 20vh !important;
-    position: relative;
-  }
+      color: var(--cl-1);
+      font-family: var(--font-1);
+      font-size: 20px;
+      font-weight: 100;
+      text-align: justify;
+      z-index: 150;
+      margin-top: 5vh !important;
+      margin-bottom: 20vh !important;
+      position: relative;
+    }
     .ubication {
       bottom: 2rem;
       left: 8rem;
@@ -209,16 +213,16 @@ import DataAbout from "./Json/About";
       margin-top: 3vh !important;
     }
     .subdescription {
-    color: var(--cl-1);
-    font-family: var(--font-1);
-    font-size: 20px;
-    font-weight: 100;
-    text-align: justify;
-    z-index: 150;
-    margin-top: 5vh !important;
-    margin-bottom: 20vh !important;
-    position: relative;
-  }
+      color: var(--cl-1);
+      font-family: var(--font-1);
+      font-size: 20px;
+      font-weight: 100;
+      text-align: justify;
+      z-index: 150;
+      margin-top: 5vh !important;
+      margin-bottom: 20vh !important;
+      position: relative;
+    }
     .ubication {
       bottom: 2rem;
       left: 8rem;
