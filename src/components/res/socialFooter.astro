@@ -8,7 +8,7 @@ import DataSocial from "../Json/Social";
     DataSocial.social.map((i) => {
       return (
         <a href={i.url} target="_blank">
-          <img src={i.img} class="icon" alt="social" />
+          <img src={i.img} class="icon" alt="social" width="25px" height="25px" />
         </a>
       );
     })
@@ -23,7 +23,7 @@ import DataSocial from "../Json/Social";
     list-style: none;
   }
   .icon {
-    width: 1.5rem;
+    width: 25px;
     margin: 0 10px !important;
     transition: 0.5s;
   }

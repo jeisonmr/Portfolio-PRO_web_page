@@ -29,7 +29,7 @@ import Social from "../Components/res/socialFooter.astro";
         </div>
       </div>
       <div class="social_2">
-        <!-- <Social /> -->
+        <Social />
       </div>
     </div>
 
@@ -52,6 +52,7 @@ import Social from "../Components/res/socialFooter.astro";
     background-color: var(--bg-1);
     z-index: 100;
     box-shadow: var(--cl-7);
+    border-bottom: solid 1px var(--bg-5);
   }
   .webContent {
     position: absolute;
@@ -94,6 +95,9 @@ import Social from "../Components/res/socialFooter.astro";
     width: 50%;
     display: flex;
     flex-direction: column;
+  }
+  .social_2{
+    display: none;
   }
   .divHome {
     width: 50%;

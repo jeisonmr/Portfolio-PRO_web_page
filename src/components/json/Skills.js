@@ -180,7 +180,7 @@ const dataSkills = {
   },
   personales: {
     titulo: ["H.","P","E","R","S","O","N","A","L","E","S"],
-    descripcion: "Organizado - Trabajo en equipo - Profesional",
+    descripcion: ["Trabajo en equipo","Creativo","Liderazgo","Autocontrol","Resolución de problemas"],
   },
   hobbies: {
     titulo: ["H","O","B","B","I","E","S"],

@@ -8,7 +8,7 @@ import DataSocial from "../Json/Social";
     DataSocial.social.map((i) => {
       return (
         <div class=`socialGroup__containerIcon icon${i.key}`>
-          <a href={i.url}>
+          <a href={i.url} target="_blank">
             <img class="icon" src={i.img} alt="social" />
           </a>
         </div>
@@ -19,13 +19,8 @@ import DataSocial from "../Json/Social";
 
 <style>
       .socialGroup{
-            width: 100%;
+            width: 420px;
             height: 100%;
-            /* background-color: red; */
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
       }
       .socialGroup__containerIcon{
             width: 200px;
@@ -34,8 +29,12 @@ import DataSocial from "../Json/Social";
             align-items: center;
             justify-content: center;
             background-color: var(--bg-7);
-            position: absolute;
-            padding-left: 100px;
+            position: relative;
+            transition: transform .2s;
+      }
+      .socialGroup__containerIcon:hover{
+            transform: scale(1.1);
+            background-color: transparent;
       }
       .icon{
             width: 50px;
@@ -43,18 +42,66 @@ import DataSocial from "../Json/Social";
       }
       .icon1{
             top: 400px;
-            left: 450px;
+            left: 220px;
+            animation: linkedin 3s ease-in-out infinite;
       }
       .icon2{
-            top: 300px;
-            left: 230px;
+            top: 100px;
+            left: 0px;
+            animation: git 3s ease-in-out infinite;
       }
       .icon3{
-            top: 620px;
-            left: 450px;
+            top: 120px;
+            left: 0px;
+            animation: cv 3s ease-in-out infinite;
       }
       .icon4{
-            top: 520px;
-            left: 230px;
+            top: 20px;
+            left: 220px;
+            animation: qr 3s ease-in-out infinite;
       }
+      @keyframes git {
+  0% {
+    transform: translate(-15px, 15px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-15px, 15px);
+  }
+}
+      @keyframes linkedin {
+  0% {
+    transform: translate(-10px, -10px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-10px, -10px);
+  }
+}
+      @keyframes cv {
+  0% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px,5px);
+  }
+}
+@keyframes qr {
+      0% {
+    transform: translate(15px, -15px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(15px, -15px);
+  }
+}
 </style>

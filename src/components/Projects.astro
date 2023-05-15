@@ -53,10 +53,13 @@ import DataProjects from "./Json/Projects";
     gap: 0px !important;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(2, auto);
+    border-top: solid 1px var(--bg-5);
+    border-bottom: solid 1px var(--bg-5);
   }
   .imgpos {
     width: 100%;
     height: auto;
+    margin-bottom: -100px !important;
   }
   .imgs {
     width: 25% !important;
@@ -67,7 +70,7 @@ import DataProjects from "./Json/Projects";
   }
   .imgs:hover {
     filter: grayscale(0.1);
-    transition: 0.4s;
+    transition: .2s;
   }
   /* View Tablet */
   @media screen and (max-width: 834px) {

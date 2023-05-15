@@ -18,7 +18,7 @@ import DataSkills from "./Json/Skills";
         DataSkills.habilidades.lenguajes.map((i) => {
           return (
             <div class="items">
-              <img class="allEffect" src={i.img} alt="" />
+              <img class="allEffect" class="allEffect" src={i.img} alt="" />
               <p>{i.lenguaje}</p>
             </div>
           );
@@ -31,7 +31,7 @@ import DataSkills from "./Json/Skills";
         DataSkills.habilidades.frameworks.map((i) => {
           return (
             <div class="items">
-              <img src={i.img} alt="" />
+              <img class="allEffect" src={i.img} alt="" />
               <p>{i.framework}</p>
             </div>
           );
@@ -44,7 +44,7 @@ import DataSkills from "./Json/Skills";
         DataSkills.habilidades.plugins.map((i) => {
           return (
             <div class="items">
-              <img src={i.img} alt="" />
+              <img class="allEffect" src={i.img} alt="" />
               <p>{i.plugin}</p>
             </div>
           );
@@ -57,7 +57,7 @@ import DataSkills from "./Json/Skills";
         DataSkills.habilidades.management.map((i) => {
           return (
             <div class="items">
-              <img src={i.img} alt="" />
+              <img class="allEffect" src={i.img} alt="" />
               <p>{i.plugin}</p>
             </div>
           );
@@ -79,7 +79,7 @@ import DataSkills from "./Json/Skills";
         DataSkills.experiencias.experiencia.map((i) => {
           return (
             <div class="items">
-              <img src={i.img} alt="" />
+              <img class="allEffect" src={i.img} alt="" />
               <div class="subItems">
                 <h4>{i.empresa}</h4>
                 <p>{i.cargo}</p>
@@ -121,7 +121,13 @@ import DataSkills from "./Json/Skills";
     <h3></h3>
     <div class="hPersonales">
       <div class="subItems">
-        <h4 class="dataPersonales">{DataSkills.personales.descripcion}</h4>
+        <ul class="listDataPersonales">
+          {
+            DataSkills.personales.descripcion.map((i) => {
+              return <li>{i}</li>;
+            })
+          }
+        </ul>
       </div>
     </div>
     <h2>
@@ -138,7 +144,7 @@ import DataSkills from "./Json/Skills";
           DataSkills.hobbies.hobbies.map((i) => {
             return (
               <div class="gridItems">
-                <img src={i.imagen} alt="" />
+                <img class="allEffect" src={i.imagen} alt="" />
                 <p>{i.titulo}</p>
               </div>
             );
@@ -164,6 +170,7 @@ import DataSkills from "./Json/Skills";
     position: relative;
     background-color: var(--bg-3);
     color: var(--cl-1);
+    border-top: solid 1px var(--bg-5);
   }
   .columnSkills {
     width: 33.3%;
@@ -202,11 +209,15 @@ import DataSkills from "./Json/Skills";
     font-size: 17px;
     letter-spacing: 2px;
   }
-  .subItems > h4 {
+  .subItems > ul, .subItems > h4  {
     font-family: var(--font-2);
     font-weight: 100;
     font-size: 17px;
     letter-spacing: 2px;
+  }
+  .subItems > ul > li{
+    margin-bottom: 20px !important;
+    margin-left: 20px !important;
   }
   .subItems > p {
     font-family: var(--font-3);
@@ -241,6 +252,13 @@ import DataSkills from "./Json/Skills";
   }
   .Logo > img {
     margin-top: 150px !important;
+  }
+  .allEffect {
+    transition: transform 0.2s;
+  }
+  .allEffect:hover {
+    transform: scale(1.2);
+    filter: brightness(0.5);
   }
   /* View Tablet */
   @media only screen and (max-width: 834px) {
