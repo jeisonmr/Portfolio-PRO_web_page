@@ -1,0 +1,239 @@
+---
+import "../Styles/root.css";
+import DataAbout from "./Json/About";
+import SocialContact from "./res/socialContact.astro";
+---
+
+<section id="about" class="aboutContainer">
+  <div class="component">{DataAbout.componente}</div>
+  <div class="contentContainer">
+    <div class="dataContainer">
+      <p class="title">
+        {
+          DataAbout.titulo.map((i) => {
+            return <span class="effectText">{i}</span>;
+          })
+        }
+      </p>
+      <p class="description">{DataAbout.descripcion}</p>
+      <p class="subdescription">{DataAbout.subdescription}</p>
+      <p class="ubication">{DataAbout.ubicacion}</p>
+    </div>
+    <div class="animationContainer">
+      <SocialContact/>
+      <div class="qrContainer">
+        <!-- <a href={DataAbout.url}
+          ><img class="qr" src={DataAbout.qr} alt="QR" /></a
+        > -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .aboutContainer {
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-4);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .contentContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background: linear-gradient(90deg, #181818 0%, #181818 50%, #262626 50%);
+  }
+  .dataContainer {
+    width: 50%;
+    height: auto;
+    position: relative;
+    padding: 22vh 60px 0 100px !important;
+    z-index: 50;
+    border-right: solid 1px var(--bg-5);
+  }
+  .animationContainer {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .qr {
+    width: 100px;
+    position: absolute;
+    right: 60px;
+    top: -50px;
+    z-index: 30 !important;
+    transition: 0.5s;
+  }
+  .qr:hover {
+    transform: scale(3);
+    transform: translate(0, 80px);
+    transition: 0.5s;
+  }
+  .title {
+    color: var(--cl-1);
+    font-family: var(--font-2);
+    font-size: 60px;
+    z-index: 150 !important;
+    font-weight: 400;
+  }
+  .description {
+    color: var(--cl-1);
+    font-family: var(--font-1);
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+    z-index: 150;
+    margin-top: 10vh !important;
+    position: relative;
+  }
+  .subdescription {
+    color: var(--cl-1);
+    font-family: var(--font-1);
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+    z-index: 150;
+    margin-top: 5vh !important;
+    margin-bottom: 20vh !important;
+    position: relative;
+  }
+  .ubication {
+    color: var(--cl-1);
+    font-family: var(--font-1);
+    font-size: 15px;
+    font-weight: 600;
+    z-index: 150;
+    position: absolute;
+    bottom: 2rem;
+    left: 15rem;
+  }
+  .component {
+    position: absolute;
+    color: var(--cl-5);
+    font-size: 20vw;
+    z-index: 40;
+    bottom: 1vh;
+    left: 13vw;
+    font-family: var(--font-2);
+  }
+  /* View Tablet */
+  @media only screen and (max-width: 834px) {
+    .aboutContainer {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+    }
+    .contentContainer {
+      width: 100%;
+      height: auto;
+      display: flex;
+      background: linear-gradient(90deg, #181818 0%, #181818 50%, #262626 50%);
+    }
+    .dataContainer {
+      padding: 5rem 2rem !important;
+      font-size: 40px;
+    }
+    .animationContainer {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      z-index: 50;
+    }
+    .qr {
+      width: 100px;
+      position: absolute;
+      right: 60px;
+      top: -50px;
+      z-index: 30 !important;
+      transition: 0.5s;
+    }
+    .qr:hover {
+      transform: scale(3);
+      transform: translate(0, 80px);
+      transition: 0.5s;
+    }
+    .title {
+      font-size: 90px;
+    }
+    .description {
+      font-size: 22px;
+      margin-top: 3vh !important;
+    }
+    .subdescription {
+      color: var(--cl-1);
+      font-family: var(--font-1);
+      font-size: 20px;
+      font-weight: 100;
+      text-align: justify;
+      z-index: 150;
+      margin-top: 5vh !important;
+      margin-bottom: 20vh !important;
+      position: relative;
+    }
+    .ubication {
+      bottom: 2rem;
+      left: 8rem;
+    }
+    .component {
+      font-size: 25vw;
+      bottom: 2vh;
+      left: 5vw;
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    .aboutContainer {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+    }
+    .contentContainer {
+      width: 100% !important;
+      height: auto !important;
+      display: flex;
+      background: linear-gradient(15deg, #181818 0%, #181818 50%, #262626 50%);
+    }
+    .dataContainer {
+      padding: 5rem 2rem !important;
+      width: 100% !important;
+      font-size: 40px;
+    }
+    .animationContainer {
+      display: none !important;
+    }
+    .title {
+      font-size: 90px;
+    }
+    .description {
+      font-size: 22px;
+      margin-top: 3vh !important;
+    }
+    .subdescription {
+      color: var(--cl-1);
+      font-family: var(--font-1);
+      font-size: 20px;
+      font-weight: 100;
+      text-align: justify;
+      z-index: 150;
+      margin-top: 5vh !important;
+      margin-bottom: 20vh !important;
+      position: relative;
+    }
+    .ubication {
+      bottom: 2rem;
+      left: 8rem;
+    }
+    .component {
+      font-size: 25vw;
+      bottom: 10vh;
+    }
+  }
+</style>

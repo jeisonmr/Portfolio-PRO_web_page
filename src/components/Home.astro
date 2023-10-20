@@ -1,0 +1,251 @@
+---
+import DataHome from "./Json/Home";
+import Social from "../Components/res/socialFooter.astro";
+---
+
+<section id="home" class="homeContainer">
+  <div class="webContent">WEB</div>
+  <div class="developerContent Desktop">DEVELOPER</div>
+  <div class="devContent">DEV</div>
+  <div class="dataContainer">
+    <div class="dataSocial">
+      <div class="social_1">
+        <p class="title">
+          {
+            DataHome.title.map((i) => {
+              return <span class="effectText">{i}</span>;
+            })
+          }
+        </p>
+        <p class="subtitle">
+          {
+            DataHome.subtitle.map((i) => {
+              return <span class="effectText">{i}</span>;
+            })
+          }
+        </p>
+        <div class="contenedor">
+          <p class="description" id="byWrite"></p>
+        </div>
+      </div>
+      <div class="social_2">
+        <Social />
+      </div>
+    </div>
+
+    <div class="divHome"></div>
+  </div>
+</section>
+
+<style>
+
+  .Desktop {
+    display: block;
+  }
+  .Smart {
+    display: none;
+  }
+  .homeContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--bg-1);
+    z-index: 100;
+    box-shadow: var(--cl-7);
+    border-bottom: solid 1px var(--bg-5);
+    margin-top: -60px !important;
+  }
+  .webContent {
+    position: absolute;
+    right: 2vw;
+    color: var(--cl-4);
+    font-size: 23vw;
+    font-family: var(--font-2);
+    font-weight: 900;
+    padding-right: 50px;
+  }
+  .developerContent {
+    position: absolute;
+    left: 2vw;
+    bottom: 0;
+    color: var(--cl-4);
+    font-size: 23vw;
+    font-family: var(--font-2);
+    font-weight: 900;
+    padding-right: 50px;
+  }
+  .devContent {
+    position: absolute;
+    left: 2vw;
+    bottom: 0;
+    color: var(--cl-4);
+    font-size: 23vw;
+    font-family: var(--font-2);
+    font-weight: 900;
+    padding-right: 50px;
+    display: none;
+  }
+  .dataContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+  .dataSocial {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .social_2{
+    display: none;
+  }
+  .divHome {
+    width: 50%;
+  }
+  /* ================================================================= */
+  .title {
+    font-family: var(--font-1);
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 120px;
+    color: var(--cl-1);
+    margin-bottom: -20px !important;
+    position: relative;
+  }
+  .subtitle {
+    font-family: var(--font-2);
+    font-weight: bold;
+    font-size: 180px;
+    letter-spacing: 0.5rem;
+    color: var(--cl-1);
+    margin-bottom: -50px !important;
+  }
+  .description {
+    font-family: var(--font-3);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 53px;
+    color: var(--cl-1);
+  }
+  .dataSocial {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .social_1 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 10rem !important;
+  }
+  /* ================================================================= */
+  .social_2 {
+    padding: 5rem 0 0 10rem !important;
+  }
+  /* ================================================================= */
+  /* Vierw Tablet */
+  @media only screen and (max-width: 834px) {
+  
+    .homeContainer {
+      height: 70rem;
+    }
+    .webContent {
+      font-size: 50vw;
+      top: 3vh;
+      left: 2vw;
+    }
+    .developerContent {
+      font-size: 60vw;
+      left: 20vw;
+      top: 35vh;
+      display: none;
+    }
+    .devContent {
+      font-size: 60vw;
+      left: 20vw;
+      top: 35vh;
+      display: block;
+    }
+    .dataContainer {
+      display: flex;
+      flex-direction: column-reverse !important;
+      position: absolute;
+    }
+    .dataSocial {
+      width: 100%;
+      height: 50%;
+    }
+    .social_1 {
+      padding: 0 0 0 2rem !important;
+    }
+    .title {
+      font-size: 110px;
+      margin-bottom: -20px !important;
+    }
+    .subtitle {
+      font-size: 240px;
+      margin-bottom: -40px !important;
+    }
+    .description {
+      font-size: 60px;
+    }
+    .social_2 {
+      padding: 1rem 10rem !important;
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  /* View Mobile */
+  @media screen and (max-width: 576px) {
+    .homeContainer {
+      height: 55rem;
+    }
+    .webContent {
+      font-size: 50vw;
+      top: 3vh;
+      left: 2vw;
+    }
+    .developerContent {
+      font-size: 60vw;
+      left: 20vw;
+      top: 35vh;
+      display: none;
+    }
+    .devContent {
+      font-size: 55vw;
+      left: 20vw;
+      top: 26vh;
+      display: block;
+    }
+    .social_1 {
+      width: 100%;
+      height: 60%;
+      justify-content: start;
+      padding: 0 0 0 2rem !important;
+    }
+    .title {
+      font-size: 20vw;
+      margin-bottom: -35px !important;
+    }
+    .subtitle {
+      font-size: 35vw;
+      letter-spacing: 0.5rem;
+      margin-bottom: -40px !important;
+    }
+    .description {
+      font-size: 40px;
+    }
+    .social_2 {
+      padding: 0.1rem 5rem !important;
+      height: 40%;
+      display: flex;
+    }
+  }
+</style>

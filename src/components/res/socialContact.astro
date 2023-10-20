@@ -1,0 +1,107 @@
+---
+import "../../Styles/root.css";
+import DataSocial from "../Json/Social";
+---
+
+<div class="socialGroup">
+  {
+    DataSocial.social.map((i) => {
+      return (
+        <div class=`socialGroup__containerIcon icon${i.key}`>
+          <a href={i.url} target="_blank">
+            <img class="icon" src={i.img} alt="social" />
+          </a>
+        </div>
+      );
+    })
+  }
+</div>
+
+<style>
+      .socialGroup{
+            width: 420px;
+            height: 100%;
+      }
+      .socialGroup__containerIcon{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-7);
+            position: relative;
+            transition: transform .2s;
+      }
+      .socialGroup__containerIcon:hover{
+            transform: scale(1.1);
+            background-color: transparent;
+      }
+      .icon{
+            width: 50px;
+            height: 50px;
+      }
+      .icon1{
+            top: 400px;
+            left: 220px;
+            animation: linkedin 3s ease-in-out infinite;
+      }
+      .icon2{
+            top: 100px;
+            left: 0px;
+            animation: git 3s ease-in-out infinite;
+      }
+      .icon3{
+            top: 120px;
+            left: 0px;
+            animation: cv 3s ease-in-out infinite;
+      }
+      .icon4{
+            top: 20px;
+            left: 220px;
+            animation: qr 3s ease-in-out infinite;
+      }
+      @keyframes git {
+  0% {
+    transform: translate(-15px, 15px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-15px, 15px);
+  }
+}
+      @keyframes linkedin {
+  0% {
+    transform: translate(-10px, -10px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-10px, -10px);
+  }
+}
+      @keyframes cv {
+  0% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px,5px);
+  }
+}
+@keyframes qr {
+      0% {
+    transform: translate(15px, -15px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(15px, -15px);
+  }
+}
+</style>
