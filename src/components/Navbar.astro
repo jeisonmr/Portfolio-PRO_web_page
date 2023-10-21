@@ -47,7 +47,7 @@ const { btnTitle } = Astro.props;
     justify-content: center;
   }
   .menuDesktop {
-    display: none;
+    /* display: none; */
   }
   /* @keyframes logo {
   0% {transform: translateX(-100px);}
@@ -57,15 +57,26 @@ const { btnTitle } = Astro.props;
   0% {transform: translateY(-100px);}
   100% {transform: translateY(0px);} */
 /* ================================================================= */
-  @media screen and (max-width: 576px) {
-    .navBar {
-      width: 100% !important;
-      z-index: 200;
+
+  @media screen and (max-width: 768px) {
+    .logoContianer{
+      width: 20% !important;
     }
     .menuContainer {
-      display: flex;
-      flex-direction: column;
-      z-index: 100;
+      justify-content: center;
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    .navBar {
+      position: sticky !important;
+    }
+    .logoContianer{
+      width: 40% !important;
+    }
+    .menuContainer {
+      justify-content: end;
+      width: 60%;
     }
   }
 </style>
