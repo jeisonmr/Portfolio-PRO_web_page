@@ -1,4 +1,4 @@
-import html from "/public/Resource/img/habilidades/htmlg.webp";
+import html from "../../../public/Resource/img/habilidades/htmlg.webp";
 import css from "/public/Resource/img/habilidades/cssg.webp";
 import sass from "/public/Resource/img/habilidades/sassg.webp"
 import javascript from "/public/Resource/img/habilidades/javascriptg.webp";

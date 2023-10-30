@@ -1,13 +1,3 @@
----
-import "../Styles/root.css";
-import Navbar from "../Components/Navbar.astro";
----
-
-<header>
-  <Navbar btnTitle="EN" />
-</header>
-
-<style>
   header {
     z-index: 200 !important;
     position: relative;
@@ -18,4 +8,3 @@ import Navbar from "../Components/Navbar.astro";
       position: sticky !important;
     }
   }
-</style>

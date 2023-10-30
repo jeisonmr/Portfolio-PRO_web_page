@@ -1,0 +1,37 @@
+---
+import "../../Styles/root.css";
+import './about.css'
+import DataAbout from "../json/About";
+import SocialContact from "../res/socialContact.astro";
+---
+
+
+
+<section id="about" class="aboutContainer">
+
+
+  <div class="component">{DataAbout.componente}</div>
+  <div class="contentContainer">
+    <div class="dataContainer">
+      <p class="title">
+        {
+          DataAbout.titulo.map((i) => {
+            return <span class="effectText">{i}</span>;
+          })
+        }
+      </p>
+      <p class="description">{DataAbout.descripcion}</p>
+      <p class="subdescription">{DataAbout.subdescription}</p>
+      <p class="ubication">{DataAbout.ubicacion}</p>
+    </div>
+    <div class="animationContainer">
+      <SocialContact/>
+      <div class="qrContainer">
+        <!-- <a href={DataAbout.url}
+          ><img class="qr" src={DataAbout.qr} alt="QR" /></a
+          > -->
+      </div>
+    </div>
+  </div>
+</section>
+

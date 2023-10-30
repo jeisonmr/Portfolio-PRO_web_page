@@ -1,36 +1,3 @@
----
-import "../Styles/root.css";
-import DataAbout from "./Json/About";
-import SocialContact from "./res/socialContact.astro";
----
-
-<section id="about" class="aboutContainer">
-  <div class="component">{DataAbout.componente}</div>
-  <div class="contentContainer">
-    <div class="dataContainer">
-      <p class="title">
-        {
-          DataAbout.titulo.map((i) => {
-            return <span class="effectText">{i}</span>;
-          })
-        }
-      </p>
-      <p class="description">{DataAbout.descripcion}</p>
-      <p class="subdescription">{DataAbout.subdescription}</p>
-      <p class="ubication">{DataAbout.ubicacion}</p>
-    </div>
-    <div class="animationContainer">
-      <SocialContact/>
-      <div class="qrContainer">
-        <!-- <a href={DataAbout.url}
-          ><img class="qr" src={DataAbout.qr} alt="QR" /></a
-        > -->
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
   .aboutContainer {
     width: 100%;
     height: auto;
@@ -51,7 +18,7 @@ import SocialContact from "./res/socialContact.astro";
     position: relative;
     padding: 22vh 60px 0 100px !important;
     z-index: 50;
-    border-right: solid 1px var(--bg-5);
+    /* border-right: solid 1px var(--bg-4); */
   }
   .animationContainer {
     width: 50%;
@@ -61,6 +28,8 @@ import SocialContact from "./res/socialContact.astro";
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 90%;
+    overflow-y: scroll;
   }
 
   .qr {
@@ -236,4 +205,3 @@ import SocialContact from "./res/socialContact.astro";
       bottom: 10vh;
     }
   }
-</style>

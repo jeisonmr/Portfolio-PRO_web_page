@@ -1,0 +1,160 @@
+---
+import "../../Styles/root.css";
+import DataSkills from '../json/Skills';
+---
+
+<section id="skill" class="skillsContainer">
+  <main class="columnSkills col1">
+    <h2 class="lenguaje">
+      {
+        DataSkills.habilidades.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
+    <h3>{DataSkills.habilidades.subt1}</h3>
+    <div class="lenguajes">
+      {
+        DataSkills.habilidades.lenguajes.map((i) => {
+          return (
+            <div class="items">
+              <img class="allEffect" class="allEffect" src={i.img} alt="" />
+              <p>{i.lenguaje}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+    <h3>{DataSkills.habilidades.subt2}</h3>
+    <div class="frameworks">
+      {
+        DataSkills.habilidades.frameworks.map((i) => {
+          return (
+            <div class="items">
+              <img class="allEffect" src={i.img} alt="" />
+              <p>{i.framework}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+    <h3>{DataSkills.habilidades.subt3}</h3>
+    <div class="frameworks">
+      {
+        DataSkills.habilidades.plugins.map((i) => {
+          return (
+            <div class="items">
+              <img class="allEffect" src={i.img} alt="" />
+              <p>{i.plugin}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+    <h3>{DataSkills.habilidades.subt4}</h3>
+    <div class="frameworks">
+      {
+        DataSkills.habilidades.management.map((i) => {
+          return (
+            <div class="items">
+              <img class="allEffect" src={i.img} alt="" />
+              <p>{i.plugin}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </main>
+  <main class="columnSkills col2">
+    <h2>
+      {
+        DataSkills.experiencias.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
+    <h3>Han confiado en mi</h3>
+    <div class="experiencias">
+      {
+        DataSkills.experiencias.experiencia.map((i) => {
+          return (
+            <div class="items">
+              <img class="allEffect" src={i.img} alt="" />
+              <div class="subItems">
+                <h4>{i.empresa}</h4>
+                <p>{i.cargo}</p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+    <h2>
+      {
+        DataSkills.educacion.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
+    <h3></h3>
+    <div class="educacion">
+      {
+        DataSkills.educacion.profesional.map((i) => {
+          return (
+            <div class="subItems">
+              <h4>{i.titulado}</h4>
+              <p>{i.cartificado}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </main>
+  <main class="columnSkills col3">
+    <h2>
+      {
+        DataSkills.personales.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
+    <h3></h3>
+    <div class="hPersonales">
+      <div class="subItems">
+        <ul class="listDataPersonales">
+          {
+            DataSkills.personales.descripcion.map((i) => {
+              return <li>{i}</li>;
+            })
+          }
+        </ul>
+      </div>
+    </div>
+    <h2>
+      {
+        DataSkills.hobbies.titulo.map((i) => {
+          return <span class="effectText">{i}</span>;
+        })
+      }
+    </h2>
+    <h3></h3>
+    <div class="hobbies">
+      <div class="hobbiesGrid">
+        {
+          DataSkills.hobbies.hobbies.map((i) => {
+            return (
+              <div class="gridItems">
+                <img class="allEffect" src={i.imagen} alt="" />
+                <p>{i.titulo}</p>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+    <div class="Logo">
+      <img src={DataSkills.logotipo} alt="" />
+    </div>
+  </main>
+</section>
+

@@ -1,25 +1,3 @@
----
-import Logo from "../Components/res/logo.astro";
-import Menu from "../Components/res/menu.astro";
-import BtnLeng from "../Components/res/es-en.astro";
-import "../Styles/root.css";
-
-interface Props {
-  btnTitle: string;
-}
-const { btnTitle } = Astro.props;
----
-
-<nav class="navBar navBarMovil">
-  <div class="logoContianer">
-    <Logo />
-  </div>
-  <div class="menuContainer">
-    <Menu btnTitle={btnTitle} />
-  </div>
-</nav>
-
-<style>
   .navBar {
     width: 100%;
     height: 60px;
@@ -79,4 +57,3 @@ const { btnTitle } = Astro.props;
       width: 60%;
     }
   }
-</style>

@@ -1,21 +1,3 @@
----
-import "../Styles/root.css";
-import Social from "../Components/res/socialFooter.astro";
-import Logo from "../../public/Resource/img/logos/jml.webp";
----
-
-<footer class="footerContainer">
-  <div class="logoSection">
-    <a href="#home"><img src={Logo} alt="Logo" /></a>
-  </div>
-  <div class="socialSection">
-    <div>
-      <Social />
-    </div>
-  </div>
-</footer>
-
-<style>
   .footerContainer {
     width: 100%;
     height: 230px;
@@ -69,4 +51,3 @@ import Logo from "../../public/Resource/img/logos/jml.webp";
     margin: 0rem !important;
   }
   }
-</style>

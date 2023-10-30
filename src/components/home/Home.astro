@@ -1,0 +1,40 @@
+---
+import "../../Styles/root.css";
+import DataHome from "../json/Home";
+import Social from "../res/socialFooter.astro";
+import './home.css';
+---
+
+<section id="home" class="homeContainer">
+  <div class="webContent">WEB</div>
+  <div class="developerContent Desktop">DEVELOPER</div>
+  <div class="devContent">DEV</div>
+  <div class="dataContainer">
+    <div class="dataSocial">
+      <div class="social_1">
+        <p class="title">
+          {
+            DataHome.title.map((i) => {
+              return <span class="effectText">{i}</span>;
+            })
+          }
+        </p>
+        <p class="subtitle">
+          {
+            DataHome.subtitle.map((i) => {
+              return <span class="effectText">{i}</span>;
+            })
+          }
+        </p>
+        <div class="contenedor">
+          <p class="description" id="byWrite"></p>
+        </div>
+      </div>
+      <!-- <div class="social_2">
+        <Social />
+      </div> -->
+    </div>
+
+    <div class="divHome"></div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+---
+import "../../Styles/root.css";
+import './projects.css';
+import DataProjects from "../json/Projects";
+---
+
+
+
+<section id="project" class="projectContainer">
+  <h2>
+    {
+      DataProjects.titulo.map((i) => {
+        return <span class="effectText">{i}</span>;
+      })
+    }
+  </h2>
+  <main class="projectSection">
+    <div class="imgContainer">
+      {
+        DataProjects.proyectos.map((i) => {
+          return (
+              <div class="imgProjects">
+              <a href={i.url} target="_blank" class="imgs" >
+                <img src={i.img} class="imgs allEffect" />
+              </a>
+              </div>
+            );
+          })
+        }
+    </div>
+  </main>
+</section>
+
+
