@@ -1,0 +1,53 @@
+---
+interface props {
+    studio: string;
+    institution: string;
+    yers: string;
+}
+const { studio, institution, years } = Astro.props;
+---
+
+<section class="education__card">
+    <main class="education__card-data">
+        <span>{studio}</span>
+        <span>{institution}</span>
+    </main>
+    <main class="education__card-time">
+        <p>{years}</p>
+    </main>
+</section>
+
+<style>
+.education__card:hover{
+    border-radius: 8px;
+    background: #ffffff17;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: .05s;
+}
+.education__card{
+    color: var(--cl-1);
+    text-align: justify;
+    width: 100%;
+    height: auto;
+    padding: 30px 30px !important;
+    display: flex;
+    flex-direction: column;
+    transition: .1s;
+    gap: 20px;
+
+}
+.education__card-data{
+    font-size: 1.3vw;
+    font-family: var(--font-2);
+    font-weight: 100 !important;
+    display: flex;
+    gap: 0 20px;
+    margin-bottom: -20px !important;
+}
+.education__card-time{
+    font-family: var(--font-4);
+    font-weight: 200 !important;
+    font-size: .8vw;
+}
+</style>

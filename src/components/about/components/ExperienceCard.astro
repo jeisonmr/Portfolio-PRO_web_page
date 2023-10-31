@@ -1,0 +1,99 @@
+---
+interface props {
+  company: string;
+  responsabilities: string;
+  stack: string;
+  time: string;
+}
+const { company, responsabilities, stack, time } = Astro.props;
+
+import pngIcon from "/public/Resource/img/experiencia/pngg.webp";
+---
+
+<section>
+  <main class="experience__card">
+    <div class="img__time">
+      <!-- <img src={pngIcon} alt={"no data"} /> -->
+      <p>{time}</p>
+    </div>
+
+    <div class="company">
+      <h3>{company}</h3>
+      <p>{responsabilities}</p>
+      <ul>{
+        stack.map((stackItems) => {
+          return <li>{stackItems}</li>
+        })
+      }</ul>
+    </div>
+  </main>
+</section>
+
+<style>
+  .experience__card {
+    display: flex;
+    flex-direction: row;
+    transition: .1s;
+    width: 100%;
+    height: auto;
+    padding: 30px 30px !important;
+    margin-bottom: 30px !important;
+
+  }
+  .experience__card:hover {
+    border-radius: 8px;
+    background: #ffffff17;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: 0.05s;
+  }
+
+
+  .img__time {
+    width: 30%;
+  }
+  .img__time > img {
+    width: 50px;
+  }
+  .img__time > p {
+    font-family: var(--font-1);
+    font-size: .8vw;
+    color: var(--cl-1);
+  }
+
+
+  .company {
+    width: 70%;
+    color: var(--cl-1);
+    line-height: 1.2em;
+    text-align: justify;
+  }
+  .company > h3{
+    /* color: var(--cl-7); */
+    font-family: var(--font-2);
+    font-size: 1.3vw;
+    font-weight: 300 !important;
+    margin-bottom: 20px !important;
+  }
+  .company > p{
+    font-family: var(--font-4);
+    font-weight: 200 !important;
+    margin-bottom: 20px !important;
+  }
+  .company ul > li{
+    font-family: var(--font-5);
+    font-weight: 200 !important;
+    font-size: .8vw;
+    border-radius: 30px;
+    background-color:  var(--bg-8);
+    padding: 10px 15px !important;
+  } 
+  .company ul > li:hover{
+    color: var(--cl-7);
+  }
+  .company > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>
