@@ -1,13 +1,60 @@
-import qr from "/public/Resource/img/logos/qr.webp";
 const dataAbout = {
-  titulo: ["C", "O", "N", "Ó", "C", "E", "M", "E"],
-  descripcion:
-    "Soy un desarrollador web front-end capacitado con mas de 3 años de experiencia en el desarrollo de soluciones personalizadas tengo habilidades sólidas en HTML, CSS, Sass, JavaScript, TypeScript, React, Astro, TailwindCSS, Bootstrap y Material-UI. Mi enfoque es crear interfaces de usuario atractivas y altamente funcionales que satisfagan las necesidades específicas de cada cliente. Además, mi experiencia en la gestión de proyectos y herramientas como Azure DevOps, Git, GitHub, Jira me permite trabajar de manera efectiva en equipo, entregando proyectos de alta calidad dentro del tiempo establecido.",
-  subdescription:
-    "Tambien me soy desarrollador WordPress con más de 5 años de experiencia,  en la creación de E-Commerces, Sitios Web y Paginas Web. Soy experto en el uso de herramientas populares de diseño como Elementor, Divi y WooCommerce. Pero lo que me diferencia de otros diseñadores de WordPress es mi habilidad para aplicar técnicas de SEO. Entiendo la importancia de la optimización de motores de búsqueda para el éxito en línea de cualquier negocio, y por lo tanto aplico técnicas que me permitan asegurar que tus sitios web se posicionen adecuadamente en los motores de búsqueda, garantizando asi rendimiento, accesibilidad y buenas practicas.",
-  componente: "Conóceme",
-  ubicacion: "- Barranquilla, Colombia -",
-  qr: qr,
-  url: "https://bit.ly/jeisonmr",
+  titles: ["About", "Experience", "Education"],
+
+  about: {
+    description : "I am a Front End Web Developer, WordPress Developer + Systems Engineer. I have also worked with web technologies since 2016, I have worked with Vanilla Js and Front End, Frameworks for 4 years including React Js, Astro, Next Js. I have been working with WordPress for 7 years.",
+    subdescription: "In recent years I have incorporated freelance work into my work life, for clients and private projects.",
+  },
+  experience: [
+    {
+      company: "Datosfera Agencia Digital",
+      responsabilities: "Developed and designed web projects, implementing SEO and high performance",
+      stack: ["WordPress", "Elementor", "WooCommerce"],
+      time: "Febrary 2023 - Present"
+    },
+    {
+      company: "PNG Technology Solutions",
+      responsabilities: "I worked on a large-scale project for the mobility secretary of Bogota and I was also in charge of carrying out projects in the front end of the web application and in projects for external companies with the WordPress CMS",
+      stack: ["Javascript", "Typescript", "React Js", "Astro", "Bootstrap"],
+      time: "Febrary 2022 - January 2023"
+    },
+    {
+      company: "Agencia Populi",
+      responsabilities: "Developed and designed web projects, implementing SEO and high performance",
+      stack: ["WordPress", "Elementor", "Divi", "WooCommerce", "Bootstrap", "Astro"],
+      time: "Febrary 2022 - December 2022"
+    },
+    {
+      company: "Freelance Home Office",
+      responsabilities: "I offered my services independently online, I worked on demand and under contracts for the provision of services.",
+      stack: ["Javascript", "Typescript", "React Js", "Astro", "TailwindCSS", "Bootstrap", "WordPress"],
+      time: "January 2020 - December 2022"
+    },
+    {
+      company: "Canadian PVC",
+      responsabilities: "Design and develop the company website, manage the website and social networks",
+      stack: ["Javascript", "Typescript", "React Js", "Astro", "Bootstrap"],
+      time: "January 2016 - December 2018"
+    },
+    {
+      company: "JV Disingelect",
+      responsabilities: "Develop the company's online store and manage it",
+      stack: ["Javascript", "Typescript", "React Js", "Astro", "Bootstrap"],
+      time: "January 2013 - December 2015"
+    }
+  ],
+
+  education: [
+    {
+      studio: "Systen Enginer",
+      institution: "Polytechnic University of the Atlantic Coast",
+      years: "January 2016 - December 2018"
+    },
+    {
+      studio: "Systen Technologist",
+      institution: "Polytechnic University of the Atlantic Coast",
+      years: "January 2013 - December 2015"
+    }
+  ]
 };
 export default dataAbout;
