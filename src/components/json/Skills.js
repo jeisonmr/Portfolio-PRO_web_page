@@ -36,34 +36,34 @@ import estudio from "/public/Resource/img/hobbies/codeg.webp";
 import logo from "/public/Resource/img/logos/jm.webp";
 
 const dataSkills = {
-  titulos: ["Lenguajes", "Frameworks", "C M S"],
-  lenguajes: [
-    { img: html, lenguaje: "HTML" },
-    { img: css, lenguaje: "CSS" },
-    { img: sass, lenguaje: "Sass" },
-    { img: javascript, lenguaje: "JavaScript" },
-    { img: typescript, lenguaje: "TypeScript" },
+  titulos: ["Languages", "Frameworks", "C M S", "Management"],
+  languages: [
+    { img: html, techName: "HTML" },
+    { img: css, techName: "CSS" },
+    { img: sass, techName: "Sass" },
+    { img: javascript, techName: "JavaScript" },
+    { img: typescript, techName: "TypeScript" },
   ],
   frameworks: [
-    { img: react, framework: "React" },
-    { img: astro, framework: "Astro" },
-    { img: bootstrap, framework: "Bootstrap" },
-    { img: tailwindcss, framework: "TailwindCSS" },
+    { img: react, techName: "React" },
+    { img: astro, techName: "Astro" },
+    { img: bootstrap, techName: "Bootstrap" },
+    { img: tailwindcss, techName: "TailwindCSS" },
   ],
   plugins: [
-    { img: wordpress, plugin: "WordPress" },
-    { img: elementor, plugin: "Elementor" },
-    { img: divi, plugin: "Divi" },
-    { img: woocommerce, plugin: "WooCommerce" },
+    { img: wordpress, techName: "WordPress" },
+    { img: elementor, techName: "Elementor" },
+    { img: divi, techName: "Divi" },
+    { img: woocommerce, techName: "WooCommerce" },
   ],
   management: [
-    { img: azure, plugin: "Azure Devops" },
-    { img: git, plugin: "Git" },
-    { img: github, plugin: "GitHub" },
-    { img: sourcetree, plugin: "Sourcetree" },
-    { img: jira, plugin: "Jira" },
-    { img: trello, plugin: "Trello" },
-    { img: slack, plugin: "Slack" },
+    { img: azure, techName: "Azure Devops" },
+    { img: git, techName: "Git" },
+    { img: github, techName: "GitHub" },
+    { img: sourcetree, techName: "Sourcetree" },
+    { img: jira, techName: "Jira" },
+    { img: trello, techName: "Trello" },
+    { img: slack, techName: "Slack" },
   ],
 };
 

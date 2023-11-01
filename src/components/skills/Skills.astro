@@ -1,38 +1,52 @@
 ---
-import "../../Styles/root.css";
-import DataSkills from '../json/Skills';
 import SkillsCard from './components/SkillsCard.astro';
+import SkillsContainer from "./components/SkillsContainer.astro";
 
-const [ t1, t2, t3 ] = DataSkills.titulos;
+import DataSkills from '../json/Skills';
+import './skills.css'
+
+import "../../Styles/root.css";
+const [ t1, t2, t3, t4 ] = DataSkills.titulos;
+const { languages, frameworks, plugins, management } = DataSkills;
 ---
 
 <section id="skills" class="skillsContainer">
-  <main class="columnSkills col1">
-    <h2 class="lenguaje">
-      <!-- {
+
+    <!-- --------------------------------------------------------------------- -->
+
+  <main class="columnSkills__Title col1">
+    <div class="techContainer" id="languages">
+      <SkillsContainer lista={languages}/>
+    </div>
+    <div class="techContainer" id="frameworks">
+      <SkillsContainer lista={frameworks}/>
+    </div>
+    <div class="techContainer" id="cms">
+      <SkillsContainer lista={plugins}/>
+    </div>
+    <div class="techContainer" id="management">
+      <SkillsContainer lista={management}/>
+    </div>
+  </main>
+
+  <!-- --------------------------------------------------------------------- -->
+
+  <main class="columnSkills__Data">
+    <h3 class="titleSkills" ><a href="#languages">{t1}</a></h3>
+    <h3 class="titleSkills" ><a href="#frameworks">{t2}</a></h3>
+    <h3 class="titleSkills" ><a href="#cms">{t3}</a></h3>
+    <h3 class="titleSkills" ><a href="#management">{t4}</a></h3>
+  </main>
+
+    <!-- --------------------------------------------------------------------- -->
+
+</section>
+  <!-- {
         DataSkills.habilidades.titulo.map((i) => {
           return <span class="effectText">{i}</span>;
         })
       } -->
-    </h2>
-    <!-- <h3>{Data}Skills.habilidades.subt1}</h3> -->
-    <div class="lenguajes">
-      <!-- {
-        DataSkills.habilidades.lenguajes.map((i) => {
-          return (
-            <div class="items">
-              <img class="allEffect" class="allEffect" src={i.img} alt="" />
-              <p>{i.lenguaje}</p>
-            </div>
-          );
-        })
-      } -->
-    </div>
-    <!-- <SkillCardContainer /> -->
-    {DataSkills.lenguajes.map(languagesItems =>{
-        return <SkillsCard img={languagesItems.img} tech={languagesItems.lenguaje} />
-      })}
-    <!-- <h3>{DataSkills.habilidades.subt2}</h3>
+<!-- <h3>{DataSkills.habilidades.subt2}</h3>
     <div class="frameworks">
       {
         DataSkills.habilidades.frameworks.map((i) => {
@@ -71,8 +85,3 @@ const [ t1, t2, t3 ] = DataSkills.titulos;
         })
       }
     </div> -->
-  </main>
-
-  </main>
-</section>
-

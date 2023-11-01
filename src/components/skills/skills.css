@@ -1,22 +1,50 @@
-* {
-  /* border: 0.1px solid red; */
-}
 .skillsContainer {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
   position: relative;
-  background-color: var(--bg-3);
+  background-color: var(--bg-2);
   color: var(--cl-1);
-  /* border-top: solid 1px var(--bg-5); */
+  
 }
-.columnSkills {
-  width: 33.3%;
-  height: 100%;
+.columnSkills__Data {
+  width: 50%;
+  height: 100dvh;
+  padding: 10% 0 0 0  !important;
+  z-index: 50;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
 }
+.columnSkills__Title{
+  width: 50%;
+  position: relative;
+  z-index: 50;
+  /* padding: 10% 5% 10% 1% !important; */
+  padding: 10% 1% 10% 5% !important;
+}
+.titleSkills{
+  font-family: var(--font-5);
+  text-transform: uppercase;
+  font-size: 20px;
+  z-index: 150 !important;
+  font-weight: 600;
+  margin: 15px 0 !important;
+}
+.titleSkills > a{
+  color: var(--cl-1);
+}
+.titleSkills > a:hover{
+  color: var(--cl-7);
+}
+
+.techContainer{
+  padding: 0 100px !important;
+}
+
 .columnSkills > h2 {
   margin: 100px 0 30px 60px !important;
   font-family: var(--font-2);
