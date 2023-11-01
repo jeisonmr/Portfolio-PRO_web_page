@@ -19,15 +19,13 @@ const [e1, e2] = DataAbout.education;
 
 <section class="aboutContainer">
 
-
-  <!-- <div class="component">{DataAbout.componente}</div> -->
   <div class="contentContainer ">
    
       <div class="dataContainer">
           
-            <p class="titleAbout">{about}</p>
-            <p class="titleAbout">{experience}</p>
-            <p class="titleAbout">{education}</p>
+            <p class="titleAbout"> <a  href="#about">{about}</a></p>
+            <p class="titleAbout"><a  href="#experience">{experience}</a></p>
+            <p class="titleAbout"><a  href="#education">{education}</a></p>
           
       </div>
 
@@ -48,7 +46,7 @@ const [e1, e2] = DataAbout.education;
           <ExperienceCard company={c6.company} responsabilities={c6.responsabilities} stack={c6.stack} time={c6.time}/>
       </div>
 
-      <div class="educationSection" id="skills">
+      <div class="educationSection" id="education">
         <EducationCard studio={e1.studio} institution={e1.institution} years={e1.years} />
         <EducationCard studio={e2.studio} institution={e2.institution} years={e2.years} />
       </div>

@@ -24,7 +24,6 @@
     align-items: center;
     position: sticky;
     top: 0;
-
   }
   .infoContainer {
     width: 50%;
@@ -49,12 +48,18 @@
     transition: 0.5s;
   }
   .titleAbout {
-    color: var(--cl-1);
-    font-family: var(--font-4);
+    font-family: var(--font-5);
+    text-transform: uppercase;
     font-size: 20px;
     z-index: 150 !important;
     font-weight: 600;
     margin: 15px 0 !important;
+  }
+  .titleAbout > a{
+    color: var(--cl-1);
+  }
+  .titleAbout > a:hover{
+    color: var(--cl-7);
   }
   .description {
     color: var(--cl-1);
