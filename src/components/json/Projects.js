@@ -1,11 +1,11 @@
-import andreisleal from "/public/Resource/img/proyectos/andreis.webp";
-import biofood from "/public/Resource/img/proyectos/bio.webp";
-import campusultra from "/public/Resource/img/proyectos/campus.webp";
-import gascaribe from "/public/Resource/img/proyectos/gas.webp";
-import alutraficled from "/public/Resource/img/proyectos/led.webp";
-import png from "/public/Resource/img/proyectos/png.webp";
-import agenciapopuli from "/public/Resource/img/proyectos/populi.webp";
-import ultracem from  "/public/Resource/img/proyectos/ultra.webp";
+const andreisleal = "/public/Resource/img/proyectos/andreis.webp";
+const biofood = "/public/Resource/img/proyectos/bio.webp";
+const campusultra = "/public/Resource/img/proyectos/campus.webp";
+const gascaribe = "/public/Resource/img/proyectos/gas.webp";
+const alutraficled = "/public/Resource/img/proyectos/led.webp";
+const png = "/public/Resource/img/proyectos/png.webp";
+const agenciapopuli = "/public/Resource/img/proyectos/populi.webp";
+const ultracem =  "/public/Resource/img/proyectos/ultra.webp";
 const dataProjects = {
   titulo: ["P","R","O","Y","E","C","T","O","S"],
   botones: ["All", "Frameworks", "Vanilla", "WordPress"],

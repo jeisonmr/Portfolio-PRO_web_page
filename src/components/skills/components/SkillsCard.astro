@@ -3,18 +3,23 @@ interface props {
   img: string;
   tech: string;
 }
+
 const { img, tech } = Astro.props;
+
+const imgSrc = JSON.stringify(img);
+
 ---
 
 <div class="skills__card">
-  <img src={"img"} alt="d" />
+  <img src={img} alt="" />
   <span>{tech}</span>
 </div>
 
+{console.log(img)}
 <style>
   .skills__card {
-    width: 100px;
-    height: 60px;
+    width: 125px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,5 +32,11 @@ const { img, tech } = Astro.props;
     border-radius: 30px;
     background-color: var(--bg-8);
     /* padding: 5px 5px !important; */
+  }
+  .skills__card:hover {
+    color: var(--cl-7);
+  }
+  .skills__card > img {
+    width: 50px;
   }
 </style>

@@ -4,17 +4,16 @@ interface props {
   responsabilities: string;
   stack: string;
   time: string;
+  img: string;
 }
-const { company, responsabilities, stack, time } = Astro.props;
-
-import pngIcon from "/public/Resource/img/experiencia/pngg.webp";
+const { company, responsabilities, stack, time, img } = Astro.props;
 ---
 
 <section>
   <main class="experience__card">
     <div class="img__time">
-      <!-- <img src={pngIcon} alt={"no data"} /> -->
       <p>{time}</p>
+      <img src={img} alt={"no data"} />
     </div>
 
     <div class="company">
@@ -59,6 +58,7 @@ import pngIcon from "/public/Resource/img/experiencia/pngg.webp";
     font-family: var(--font-1);
     font-size: .8vw;
     color: var(--cl-1);
+    margin-bottom: 10px !important;
   }
 
 
