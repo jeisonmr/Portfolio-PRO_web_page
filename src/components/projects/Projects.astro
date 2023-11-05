@@ -15,7 +15,15 @@ import DataProjects from "../json/Projects";
       })
     }
   </h2>
-  <main class="projectSection">
+  <main class="projectCard__Container">
+    {DataProjects.proyectos.map(items =>{
+      return(
+      <ProjectCard img={items.img} url={items.url} title={items.proyecto} stack={items.tecnologias} />
+      )
+    })}
+    
+  </main>
+  <!-- <main class="projectSection">
     <div class="imgContainer">
       {
         DataProjects.proyectos.map((i) => {
@@ -29,11 +37,20 @@ import DataProjects from "../json/Projects";
           })
         }
     </div>
-  </main>
-  <main>
-    <ProjectCard/>
-  </main>
+  </main> -->
 </section>
 
+<style>
+  .projectCard__Container{
+    width: 100%;
+    height: auto;
+    padding: 40px 20px !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+  }
+</style>
 
 

@@ -49,7 +49,7 @@ const dataProjects = {
     {
       img : agenciapopuli,
       url: "https://agenciapopuli.com/",
-      proyecto: "Agencia Populi",
+      proyecto: "ADN Populi",
       tecnologias:["WordPress","Elementor"]
     },
     {
