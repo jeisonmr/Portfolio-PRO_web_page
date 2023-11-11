@@ -2,10 +2,8 @@
     width: 100%;
     height: 60px;
     display: flex;
-    /* justify-content: space-between; */
     padding: 10px 30px !important;
-    /* background-color: var(--bg-2); */
-    position: relative !important;
+    position: static !important;
     z-index: 200;
     animation: header 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation-delay: .5s;
@@ -24,16 +22,7 @@
     align-items: center;
     justify-content: center;
   }
-  .menuDesktop {
-    /* display: none; */
-  }
-  /* @keyframes logo {
-  0% {transform: translateX(-100px);}
-  100% {transform: translateX(2px);}
-} */
-/* @keyframes header {
-  0% {transform: translateY(-100px);}
-  100% {transform: translateY(0px);} */
+
 /* ================================================================= */
 
   @media screen and (max-width: 768px) {
@@ -47,7 +36,9 @@
   }
   @media screen and (max-width: 425px) {
     .navBar {
-      position: sticky !important;
+      position: fixed !important;
+      top: 0;
+      background-color: #0000006c;
     }
     .logoContianer{
       width: 40% !important;

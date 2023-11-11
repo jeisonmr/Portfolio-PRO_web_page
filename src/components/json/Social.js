@@ -1,7 +1,7 @@
-import  linkedin from "/public/Resource/img/logos/linkedin.webp";
-import github from "/public/Resource/img/logos/github.webp";
-import cv from "/public/Resource/img/logos/cv.webp";
-import qr from "/public/Resource/img/logos/qr.webp";
+const  linkedin = "/public/Resource/img/logos/linkedin.webp";
+const github = "/public/Resource/img/logos/github.webp";
+const cv = "/public/Resource/img/logos/cv.webp";
+const qr = "/public/Resource/img/logos/qr.webp";
 const dataSocial = {
       social: [
             {
@@ -19,11 +19,11 @@ const dataSocial = {
               url: "https://bit.ly/cvJeison",
               img: cv,
             },
-            {
-              key: 4,
-              url: "https://bit.ly/jeisonmr",
-              img: qr,
-            },
+            // {
+            //   key: 4,
+            //   url: "https://bit.ly/jeisonmr",
+            //   img: qr,
+            // },
           ],
 }
 

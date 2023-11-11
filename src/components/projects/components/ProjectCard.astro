@@ -99,7 +99,7 @@ const { img, title, stack, url } = Astro.props;
     font-weight: 200 !important;
     font-size: 12px;
     border-radius: 30px;
-    background-color:  var(--bg-8);
+    background-color: var(--bg-8);
     padding: 5px 8px !important;
   }
   .card .info ul {
@@ -113,21 +113,28 @@ const { img, title, stack, url } = Astro.props;
     outline: none;
     border: none;
     border-radius: 30px;
-    background-color:  var(--bg-8);
+    background-color: var(--bg-8);
     color: var(--cl-1) !important;
     font-weight: bold;
     cursor: pointer;
     transition: 0.4s ease;
   }
   .card .info button:hover {
-    background-color:  var(--bg-9);
+    background-color: var(--bg-9);
     outline: none;
     border: none;
   }
   .card .info button a {
     color: var(--cl-1) !important;
-  } 
+  }
   .card .info button a:hover {
     color: var(--cl-1) !important;
+  }
+
+  @media screen and (max-width: 834px) {
+    .card {
+      width: 300px;
+      height: 300px;
+    }
   }
 </style>

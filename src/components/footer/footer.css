@@ -24,7 +24,12 @@
   }
   @media screen and (max-width: 834px){
     .footerContainer {
-    height: 15rem;
+    height: 10rem;
+  }
+  .logoSection > p{
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;
   }
   .logoSection > a > img {
     width: 7rem;
@@ -33,7 +38,7 @@
   }
   @media screen and (max-width: 576px){
     .footerContainer {
-    height: 25rem;
+    height: 9rem;
     display: flex;
     flex-direction: column-reverse;
   }

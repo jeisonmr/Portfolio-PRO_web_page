@@ -70,7 +70,6 @@ const { company, responsabilities, stack, time, img } = Astro.props;
     text-align: justify;
   }
   .company > h3{
-    /* color: var(--cl-7); */
     font-family: var(--font-2);
     font-size: 1.3vw;
     font-weight: 300 !important;
@@ -97,4 +96,38 @@ const { company, responsabilities, stack, time, img } = Astro.props;
     flex-wrap: wrap;
     gap: 10px;
   }
+
+
+  @media only screen and (max-width: 834px) {
+    .img__time > p {
+    font-size: 10px;
+  }
+    .company > h3{
+    font-size: 20px;
+  }
+  .company > p{
+   font-size: 15px !important;
+  }
+  .company ul > li{
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .img__time{
+    margin-right: 20px !important;
+  }
+  .img__time > p {
+    font-size: 10px;
+  }
+    .company > h3{
+    font-size: 20px;
+  }
+  .company > p{
+   font-size: 15px !important;
+  }
+  .company ul > li{
+    font-size: 11px;
+  } 
+}
 </style>
