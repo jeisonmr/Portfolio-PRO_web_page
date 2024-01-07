@@ -1,31 +1,3 @@
----
-interface props {
-  img: string;
-  url: string;
-  title: string;
-  stack: string;
-}
-const { img, title, stack, url } = Astro.props;
----
-
-<div class="card">
-  <img class="front" src={img} alt={title} />
-  <div class="info">
-    <h4>{title}</h4>
-    <div>
-      <ul>
-        {
-          stack.map((stackItems) => {
-            return <li>{stackItems}</li>;
-          })
-        }
-      </ul>
-    </div>
-    <button><a href={url} target="_blank">View online</a></button>
-  </div>
-</div>
-
-<style>
   .card {
     width: 400px;
     height: 400px;
@@ -137,4 +109,3 @@ const { img, title, stack, url } = Astro.props;
       height: 300px;
     }
   }
-</style>

@@ -59,6 +59,10 @@
   .allEffect:hover {
     transform: scale(1.2);
   }
+
+  .grid-item { width: 25%; }
+.grid-item--width2 { width: 50%; }
+
   /* View Tablet */
   @media screen and (max-width: 834px) {
   .imgProjects{

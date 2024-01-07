@@ -17,167 +17,207 @@ const sole = "/public/Resource/img/proyectos/sole.png";
 const portafolio = "/public/Resource/img/proyectos/portafolio.png";
 const seven = "/public/Resource/img/proyectos/seven-time.png";
 const wtc = "/public/Resource/img/proyectos/wtc.png";
+const neurodiagnostico = "/public/Resource/img/proyectos/neurodiagnostico.png";
+const vigimonstruos = "/public/Resource/img/proyectos/vigimonstruos.png";
 
-// import { true } from './Projects';
+
 
 const dataProjects = {
   titulo: ["P", "R", "O", "J", "E", "C", "T", "S"],
-  botones: ["All", "Frameworks", "Vanilla", "WordPress"],
+  botones: ["All", "Code", "C M S"],
   proyectos: [
     {
+      id: 1,
       img: andreisleal,
-      url: "https://portal.deandreislegal.co/login",
       proyecto: "De Andreis",
-      tecnologias: ["React", "Bootstrap", "Typescript"],
+      category: ['all', 'code'],
+      url: "https://portal.deandreislegal.co/login",
+      tecnologias: ["React", "Bootstrap", "Typescript","Javascript", "Figma"],
       active: true,
-      index: 'fw'
     },
     {
+      id: 2,
       img: biofood,
-      url: "https://biofoodsoftware.com/",
       proyecto: "Biofood",
+      category: ['all', 'code'],
+      url: "https://biofoodsoftware.com/",
       tecnologias: ["Vanilla Js", "Bootstrap", "CSS", "Javasript"],
       active: true,
-      index: 'fw'
     },
     {
-      img: campusultra,
-      url: "https://campusultra.com/",
-      proyecto: "Campus Ultra",
-      tecnologias: ["WordPress", "Elementor"],
-      active: true,
-      index: 'wp'
-    },
-    {
-      img: gascaribe,
-      url: "https://gascaribe.com/",
-      proyecto: "Gases del caribe",
-      tecnologias: ["WordPress", "Divi"],
-      active: true,
-      index: 'wp'
-    },
-    {
-      img: alutraficled,
-      url: "https://alutraficled.com/",
-      proyecto: "AlutraficLed",
-      tecnologias: ["WordPress", "Elementor"],
-      active: true,
-      index: 'wp'
-    },
-    {
+      id: 3,
       img: png,
-      url: "https://pngtechnology.co/",
+      category: ['all', 'code'],
+      url: 'https://pngtechnology.netlify.app/',
+      // url: "https://pngtechnology.co/",
       proyecto: "PNG Technology Solutions",
       tecnologias: ["Vanilla Js", "Bootstrap", "CSS", "Javasript"],
       active: true,
-      index: 'fw'
     },
     {
-      img: agenciapopuli,
-      url: "https://agenciapopuli.com/",
-      proyecto: "ADN Populi",
-      tecnologias: ["WordPress", "Elementor"],
-      active: true,
-      index: 'wp'
-    },
-    {
-      img: codegar,
-      url: "https://codegar.com/",
-      proyecto: "Codegar",
-      tecnologias: ["WordPress", "Elementor"],
-      active: true,
-      index: 'wp'
-    },
-    {
-      img: casalianza,
-      url: "https://www.casalianzacolombia.com/",
-      proyecto: "Casalianza",
-      tecnologias: ["WordPress", "Elementor"],
-      active: true,
-      index: 'wp'
-    },
-    {
-      img: infortec,
-      url: "https://www.infortec.co/",
-      proyecto: "Infortec",
-      tecnologias: ["WordPress", "Elementor"],
-      active: true,
-      index: 'wp'
-    },
-    {
-      img: sneaker,
-      url: "https://sneakergirls.store/",
-      proyecto: "Sneaker Girl",
-      tecnologias: ["WordPress", "Elementor"],
-      active: true,
-      index: 'wp'
-    },
-    {
-      img: sole,
-      url: "https://www.solesoluciones.com/",
-      proyecto: "Solé",
-      tecnologias: ["WordPress", "Elementor"],
-      active: true,
-      index: 'wp'
-    },
-    {
+      id: 4,
       img: portafolio,
-      url: "https://jeisondev.pro/",
       proyecto: "Portafolio",
-      tecnologias: ["WordPress", "Elementor"],
+      category: ['all', 'code'],
+      url: "https://jeisondev.pro/",
+      tecnologias: ["Astro", "Typescript","Javascript","React","Bootstrap", "Figma"],
       active: true,
-      index: 'fw'
     },
     {
+      id: 5,
+      img: agenciapopuli,
+      proyecto: "ADN Populi",
+      url: "https://agenciapopuli.com/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 6,
+      img: gascaribe,
+      proyecto: "Gases del caribe",
+      url: "https://gascaribe.com/",
+      tecnologias: ["WordPress", "Divi"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 7,
+      img: alutraficled,
+      proyecto: "AlutraficLed",
+      url: "https://alutraficled.com/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 8,
+      img: codegar,
+      proyecto: "Codegar",
+      url: "https://codegar.com/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 9,
+      img: campusultra,
+      proyecto: "Campus Ultra",
+      url: "https://campusultra.com/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 10,
+      img: casalianza,
+      proyecto: "Casalianza",
+      url: "https://www.casalianzacolombia.com/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 11,
+      img: infortec,
+      proyecto: "Infortec",
+      url: "https://www.infortec.co/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 12,
+      img: sneaker,
+      proyecto: "Sneaker Girl",
+      url: "https://sneakergirls.store/",
+      tecnologias: ["WordPress", "WooCommerce", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 13,
+      img: sole,
+      proyecto: "Solé",
+      url: "https://www.solesoluciones.com/",
+      tecnologias: ["WordPress", "WooCommerce", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 14,
       img: seven,
-      url: "https://seven7times.com/",
       proyecto: "Seven 7imes",
-      tecnologias: ["WordPress", "Elementor"],
+      url: "https://seven7times.com/",
+      tecnologias: ["WordPress","WooCommerce", "Elementor", "Figma"],
       active: true,
-      index: 'wp'
+      category: ['all',"cms"]
     },
     {
+      id: 15,
       img: wtc,
-      url: "https://wtcpereira.com/",
       proyecto: "World Trade Center",
-      tecnologias: ["WordPress", "Elementor"],
+      url: "https://wtcpereira.com/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      index: 'wp'
+      category: ['all',"cms"]
     },
     {
+      id: 16,
+      img: vigimonstruos,
+      proyecto: "VigiMonstruos",
+      url: "https://vigimonstruos.aseopereira.gov.co/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 17,
+      img: neurodiagnostico,
+      proyecto: "Neurodiagnostico",
+      url: "http://www.neurodiagnostico.com.co/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
+      active: true,
+      category: ['all',"cms"]
+    },
+    {
+      id: 18,
       img: ultracem_colombia,
-      url: "https://ultracem.co/",
       proyecto: "Campus Ultra Colombia",
-      tecnologias: ["WordPress", "Elementor"],
+      url: "https://ultracem.co/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      index: 'wp'
+      category: ['all',"cms"]
     },
     ,
     {
+      id: 19,
       img: ultracem_honduras,
-      url: "https://ultracem.hn/",
       proyecto: "Campus Ultra Honduras",
-      tecnologias: ["WordPress", "Elementor"],
+      url: "https://ultracem.hn/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      index: 'wp'
+      category: ['all',"cms"]
     },
     ,
     {
+      id: 20,
       img: ultracem_guatemala,
-      url: "https://ultracem.gt/",
       proyecto: "Campus Ultra Guatemala",
-      tecnologias: ["WordPress", "Elementor"],
+      url: "https://ultracem.gt/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      index: 'wp'
+      category: ['all',"cms"]
     },
     ,
     {
+      id: 21,
       img: ultracem_panama,
-      url: "https://ultracem.pa/",
       proyecto: "Campus Ultra Panamá",
-      tecnologias: ["WordPress", "Elementor"],
+      url: "https://ultracem.pa/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      index: 'wp'
+      category: ['all',"cms"]
     },
   ],
 };

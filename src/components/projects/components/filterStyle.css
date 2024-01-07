@@ -1,0 +1,61 @@
+  .projectCard__Container {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+  }
+
+  .itemProjectMenu:hover::before {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+  .itemProjectMenu::before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: var(--bg-5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 0.2s ease;
+  }
+  .itemProjectMenu {
+    color: var(--cl-2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--cl-1);
+    font-family: var(--font-1);
+  }
+  .containerMenu{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px !important;
+  }
+  .containerMenu > button{
+    font-family: var(--font-5);
+    color: var(--cl-1);
+    background-color: transparent;
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 5px 20px !important;
+    border: none;
+    transition: 1s;
+    background-color: var(--bg-10);
+  }
+  .containerMenu > button:hover{
+    color: var(--cl-7);
+    
+  }
+
+  .inactive{
+    display: none;
+  }

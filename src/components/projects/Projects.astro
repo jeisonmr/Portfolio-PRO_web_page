@@ -1,90 +1,31 @@
 ---
 import "../../Styles/root.css";
 import "./projects.css";
-import ProjectCard from "./components/ProjectCard.astro";
-import DataProjects from "../json/Projects";
-import type { Code } from "astro:components";
-import React, { useState } from 'react';
-
-const [All, Frameworks, WordPress] = DataProjects.botones;
-
-
+// import DataProjects from "../json/Projects";
+// import type { Code } from "astro:components";
+import { FilterProjects } from "./components/filterProjects";
 ---
 
 <section id="works" class="projectContainer">
-
-  <main class="projectCard__Container">
-    {
-      DataProjects.proyectos.map((items) => {
-        return (
-          (items.active ?  <ProjectCard img={items.img} url={items.url} title={items.proyecto} stack={items.tecnologias} /> : '')
-          );
-        })
-      }
-  </main>
+  <FilterProjects />
 </section>
 
 <script>
-  
-  const [active, setActive] = useState(true);
-    
-  const btnAll = document.getElementById('All');
-  const btnFramework = document.getElementById('Fwk');
-  const btnWordPress = document.getElementById('Wp');
-  
-  const ActiveFrameworks = () =>{
+  //   const [active, setActive] = useState(true);
 
-    setActive(true)
+  //   const btnAll = document.getElementById('All');
+  //   const btnFramework = document.getElementById('Fwk');
+  //   const btnWordPress = document.getElementById('Wp');
 
-  }
-    
-  btnFramework.addEventListener('click', ActiveFrameworks);
+  //   const ActiveFrameworks = () =>{
 
-  export default[
-    active, setActive
-];
+  //     setActive(true)
 
+  //   }
+
+  //   btnFramework.addEventListener('click', ActiveFrameworks);
+
+  //   export default[
+  //     active, setActive
+  // ];
 </script>
-
-
-<style>
-  .projectCard__Container {
-    width: 100%;
-    height: auto;
-    padding: 40px 20px !important;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 50px;
-  }
-
-  .itemProjectMenu:hover::before {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
-  }
-  .itemProjectMenu::before {
-    position: absolute;
-    content: "";
-    bottom: -10px;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background: var(--bg-5);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(5px);
-    transition: all 0.2s ease;
-  }
-  .itemProjectMenu {
-    color: var(--cl-2);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--cl-1);
-    font-family: var(--font-1);
-
-  }
-</style>
-
-
