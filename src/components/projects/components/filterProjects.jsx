@@ -3,22 +3,42 @@ import DataProjects from "../../json/Projects";
 import { ProjectCard } from "../components/ProjectCard";
 import "./filterStyle.css";
 
+
+
 export const FilterProjects = () => {
+
+
+  const [all, code, cms] = DataProjects.botones;
+
+  const [codeBtn, setCodeBtn] = useState([]);
+
+  function filterListProjects(){
+
+    let codeList = DataProjects.proyectos.filter((code) =>code.category === 'code');
+    setCodeBtn(codeList);
+    console.log(codeBtn);
+  }
+
+  useEffect(() => {
+    filterListProjects();
+  }, [])
+  
+
   return (
-    <main id="works" class="projectContainer">
-      <main className="containerMenu">
+    <section id="works" class="projectContainer">
+      {/* <main className="containerMenu">
         <button className={""} onClick={""}>
-          {DataProjects.botones[0]}
+          {all}
         </button>
 
-        <button className={""} onClick={""}>
-          {DataProjects.botones[1]}
+        <button onClick={filterListProjects}>
+          {code}
         </button>
 
-        <button className={""} onClick={""}>
-          {DataProjects.botones[2]}
+        <button onClick={''} className={""}>
+          {cms}
         </button>
-      </main>
+      </main> */}
 
       <main class="projectCard__Container">
         {DataProjects.proyectos.map((items) => {
@@ -32,6 +52,6 @@ export const FilterProjects = () => {
           );
         })}
       </main>
-    </main>
+    </section>
   );
 };

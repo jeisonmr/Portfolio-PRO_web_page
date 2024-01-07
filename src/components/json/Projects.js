@@ -24,13 +24,13 @@ const vigimonstruos = "/public/Resource/img/proyectos/vigimonstruos.png";
 
 const dataProjects = {
   titulo: ["P", "R", "O", "J", "E", "C", "T", "S"],
-  botones: ["All", "Code", "C M S"],
+  botones: ["All", "CODE", "C M S"],
   proyectos: [
     {
       id: 1,
       img: andreisleal,
       proyecto: "De Andreis",
-      category: ['all', 'code'],
+      category: 'code',
       url: "https://portal.deandreislegal.co/login",
       tecnologias: ["React", "Bootstrap", "Typescript","Javascript", "Figma"],
       active: true,
@@ -39,7 +39,7 @@ const dataProjects = {
       id: 2,
       img: biofood,
       proyecto: "Biofood",
-      category: ['all', 'code'],
+      category: 'code',
       url: "https://biofoodsoftware.com/",
       tecnologias: ["Vanilla Js", "Bootstrap", "CSS", "Javasript"],
       active: true,
@@ -47,7 +47,7 @@ const dataProjects = {
     {
       id: 3,
       img: png,
-      category: ['all', 'code'],
+      category: 'code',
       url: 'https://pngtechnology.netlify.app/',
       // url: "https://pngtechnology.co/",
       proyecto: "PNG Technology Solutions",
@@ -58,7 +58,7 @@ const dataProjects = {
       id: 4,
       img: portafolio,
       proyecto: "Portafolio",
-      category: ['all', 'code'],
+      category: 'code',
       url: "https://jeisondev.pro/",
       tecnologias: ["Astro", "Typescript","Javascript","React","Bootstrap", "Figma"],
       active: true,
@@ -70,7 +70,7 @@ const dataProjects = {
       url: "https://agenciapopuli.com/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 6,
@@ -79,7 +79,7 @@ const dataProjects = {
       url: "https://gascaribe.com/",
       tecnologias: ["WordPress", "Divi"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 7,
@@ -88,7 +88,7 @@ const dataProjects = {
       url: "https://alutraficled.com/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 8,
@@ -97,7 +97,7 @@ const dataProjects = {
       url: "https://codegar.com/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 9,
@@ -106,7 +106,7 @@ const dataProjects = {
       url: "https://campusultra.com/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 10,
@@ -115,7 +115,7 @@ const dataProjects = {
       url: "https://www.casalianzacolombia.com/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 11,
@@ -124,7 +124,7 @@ const dataProjects = {
       url: "https://www.infortec.co/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 12,
@@ -133,7 +133,7 @@ const dataProjects = {
       url: "https://sneakergirls.store/",
       tecnologias: ["WordPress", "WooCommerce", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 13,
@@ -142,7 +142,7 @@ const dataProjects = {
       url: "https://www.solesoluciones.com/",
       tecnologias: ["WordPress", "WooCommerce", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 14,
@@ -151,7 +151,7 @@ const dataProjects = {
       url: "https://seven7times.com/",
       tecnologias: ["WordPress","WooCommerce", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 15,
@@ -160,7 +160,7 @@ const dataProjects = {
       url: "https://wtcpereira.com/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 16,
@@ -169,7 +169,7 @@ const dataProjects = {
       url: "https://vigimonstruos.aseopereira.gov.co/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 17,
@@ -178,7 +178,7 @@ const dataProjects = {
       url: "http://www.neurodiagnostico.com.co/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     {
       id: 18,
@@ -187,7 +187,7 @@ const dataProjects = {
       url: "https://ultracem.co/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     ,
     {
@@ -197,7 +197,7 @@ const dataProjects = {
       url: "https://ultracem.hn/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     ,
     {
@@ -207,7 +207,7 @@ const dataProjects = {
       url: "https://ultracem.gt/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
     ,
     {
@@ -217,7 +217,7 @@ const dataProjects = {
       url: "https://ultracem.pa/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
-      category: ['all',"cms"]
+      category: 'cms'
     },
   ],
 };

@@ -2,6 +2,11 @@ import React from 'react'
 import "./cardStyle.css";
 
 export const ProjectCard = ({img, title, url, stack} ) => {
+
+  console.log('Hola');
+
+  console.log(url)
+
   return (
     <div className="card">
       <img className="front" src={img} alt={title} />
