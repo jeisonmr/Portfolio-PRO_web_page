@@ -1,19 +1,14 @@
 ---
 interface props{
     lista:[];
+    skillsItems: string
 }
 const { lista } = Astro.props;
-
-// const [ img, techName ] = lista;
-// console.log(img, techName);
-
 import SkillsCard from "./SkillsCard.astro";
-import DataSkills from '../../json/Skills';
 ---
 
 <section class="skills__card-container">
-    {lista.map(techItems =>{
-        return <SkillsCard img={techItems.img} tech={techItems.techName} />})}
+    {lista.map((skillsItems: { img: string; techName: string; }) =><SkillsCard img={skillsItems.img} tech={skillsItems.techName} />)}
 </section>
 
 <style>
@@ -31,7 +26,6 @@ import DataSkills from '../../json/Skills';
     }
     .skills__card-container:hover {
     border-radius: 8px;
-    /* background: #ffffff17; */
     background: #141414;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);

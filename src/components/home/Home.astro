@@ -12,18 +12,10 @@ import './home.css';
     <div class="dataSocial">
       <div class="social_1">
         <p class="title">
-          {
-            DataHome.title.map((i) => {
-              return <span class="effectText">{i}</span>;
-            })
-          }
+          {DataHome.title.map((i) => <span class="effectText">{i}</span>)}
         </p>
         <p class="subtitle">
-          {
-            DataHome.subtitle.map((i) => {
-              return <span class="effectText">{i}</span>;
-            })
-          }
+          {DataHome.subtitle.map((i) => <span class="effectText">{i}</span>)}
         </p>
         <div class="contenedor">
           <p class="description" id="byWrite"></p>

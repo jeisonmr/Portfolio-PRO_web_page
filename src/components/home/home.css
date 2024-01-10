@@ -164,11 +164,12 @@
   @media screen and (max-width: 425px) {
     .homeContainer {
       height: 55rem;
+      
     }
     .webContent {
       font-size: 50vw;
-      top: 3vh;
-      left: 2vw;
+      top: 6rem;
+      left: 6vw;
       margin-top: 50px !important;
     }
     .developerContent {
@@ -180,18 +181,18 @@
     .devContent {
       font-size: 55vw;
       left: 20vw;
-      top: 26vh;
+      top: 19rem;
       display: block;
     }
     .social_1 {
       width: 100%;
       height: 60%;
       justify-content: start;
-      padding: 0 0 0 2rem !important;
+      padding: 70px 0 0 2rem !important;
     }
     .title {
       font-size: 20vw;
-      margin-bottom: -30px !important;
+      margin-bottom: -25px !important;
     }
     .subtitle {
       font-size: 33vw;

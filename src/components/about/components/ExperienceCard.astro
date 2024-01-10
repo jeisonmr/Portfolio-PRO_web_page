@@ -20,7 +20,7 @@ const { company, responsabilities, stack, time, img } = Astro.props;
       <h3>{company}</h3>
       <p>{responsabilities}</p>
       <ul>{
-        stack.map((stackItems) => {
+        stack.map((stackItems:{stackItems:string}) => {
           return <li>{stackItems}</li>
         })
       }</ul>

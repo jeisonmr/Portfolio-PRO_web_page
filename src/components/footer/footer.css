@@ -21,6 +21,7 @@
     align-items: center;
     justify-content: center;
   }
+  
   @media screen and (max-width: 834px){
     .footerContainer {
     height: 10rem;

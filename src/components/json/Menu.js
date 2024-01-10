@@ -8,13 +8,9 @@ const lista = [
     url: "#skills",
   },
   {
-    item: "Works",
-    url: "#works",
+    item: "Projetcs",
+    url: "#projects",
   },
-  // {
-  //   item: "Portafolio",
-  //   url: "#project",
-  // },
 ];
 
 export default lista;

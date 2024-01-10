@@ -2,9 +2,6 @@
 import "../../Styles/root.css";
 import './about.css'
 import DataAbout from "../json/About";
-import SocialContact from "../res/socialContact.astro";
-import Experience from "./components/ExperienceCard.astro";
-import Education from "./components/EducationCard.astro";
 import AboutCard from "./components/AboutCard.astro";
 import ExperienceCard from "./components/ExperienceCard.astro";
 import EducationCard from "./components/EducationCard.astro";
@@ -20,23 +17,21 @@ const [e1, e2] = DataAbout.education;
 <section class="aboutContainer">
 
   <div class="contentContainer ">
-   
+
       <div class="dataContainer">
-          
             <p class="titleAbout"> <a  href="#about">{about}</a></p>
             <p class="titleAbout"><a  href="#experience">{experience}</a></p>
             <p class="titleAbout"><a  href="#education">{education}</a></p>
-          
       </div>
 
     <!-- --------------------------------------------------------------------- -->
-    
+
     <div class="infoContainer ">
 
       <div class="aboutSection" id="about">
           <AboutCard description={description} subdescription={subdescription}/>
       </div>
-      
+
       <div class="experienceSection" id="experience">
           <ExperienceCard company={c1.company} responsabilities={c1.responsabilities} stack={c1.stack} time={c1.time} img={c1.img}/>
           <ExperienceCard company={c2.company} responsabilities={c2.responsabilities} stack={c2.stack} time={c2.time} img={c2.img}/>

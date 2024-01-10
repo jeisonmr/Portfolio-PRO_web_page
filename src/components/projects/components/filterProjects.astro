@@ -1,3 +1,25 @@
+---
+interface FilterProjects {
+}
+const { itemsProjects } = Astro.props;
+
+import DataProjects from "../../json/Projects";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+
+
+<section id="works" class="projectContainer">
+  <main class="projectCard__Container">
+    {DataProjects.proyectos.map((itemsProjects) => {
+        return ( itemsProjects && <ProjectCard img={itemsProjects.img} url={itemsProjects.url} title={itemsProjects.proyecto} stack={itemsProjects.tecnologias} />);
+      })
+    }
+  </main>
+</section>
+);
+
+<style>
   .projectCard__Container {
     width: 100%;
     height: auto;
@@ -34,13 +56,13 @@
     color: var(--cl-1);
     font-family: var(--font-1);
   }
-  .containerMenu{
+  .containerMenu {
     display: flex;
     gap: 20px;
     justify-content: center;
     padding: 50px !important;
   }
-  .containerMenu > button{
+  .containerMenu > button {
     font-family: var(--font-5);
     color: var(--cl-1);
     background-color: transparent;
@@ -51,11 +73,11 @@
     transition: 1s;
     background-color: var(--bg-10);
   }
-  .containerMenu > button:hover{
+  .containerMenu > button:hover {
     color: var(--cl-7);
-    
   }
 
-  .inactive{
+  .inactive {
     display: none;
   }
+</style>

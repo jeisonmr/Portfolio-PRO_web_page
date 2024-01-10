@@ -1,33 +1,9 @@
 ---
 import "../../Styles/root.css";
 import "./projects.css";
-// import DataProjects from "../json/Projects";
-// import type { Code } from "astro:components";
-import { FilterProjects } from "./components/filterProjects";
+import  FilterProjects  from "./components/filterProjects.astro";
 ---
 
-<section id="works" class="projectContainer">
-  <FilterProjects />
+<section id="projects" class="projectContainer">
+  <FilterProjects/>
 </section>
-
-<script>
-  //   const [active, setActive] = useState(true);
-
-  //   const btnAll = document.getElementById('All');
-  //   const btnFramework = document.getElementById('Fwk');
-  //   const btnWordPress = document.getElementById('Wp');
-
-  //   const ActiveFrameworks = () =>{
-
-  //     setActive(true)
-
-  //   }
-
-  //   btnFramework.addEventListener('click', ActiveFrameworks);
-
-  //   export default[
-  //     active, setActive
-  // ];
-
-  // console.log('Hola a Todos!')
-</script>

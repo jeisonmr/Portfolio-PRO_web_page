@@ -1,25 +1,20 @@
 ---
-import Menu from "../Json/Menu";
+import MenuList from "../Json/Menu";
 import "../../Styles/root.css";
 const IconClose = "/public/Resource/img/logos/close.svg";
 const IconOpen = "/public/Resource/img/logos/open.svg";
-
-interface Props {
-  btnTitle: string;
-}
-const { btnTitle } = Astro.props;
 ---
 
 <!-- Mapeo de items del menu -->
 <div class="menuBarContainer">
   <ul class="menuBar">
     {
-      Menu.map((i) => {
+      MenuList.map((i: { url: string; item: string }) => {
         return (
           <li class="menuItemsBtn">
-              <a id="menuItems" class="items" href={i.url}>
-                {i.item}
-              </a>
+            <a id="menuItems" class="items" href={i.url}>
+              {i.item}
+            </a>
           </li>
         );
       })
@@ -37,14 +32,14 @@ const { btnTitle } = Astro.props;
 
 <script>
   // Btn Lenguage
-  const menuBtn = document.querySelector(".btnMenu");
+  const menuBtn: Element = document.querySelector(".btnMenu")!;
   // Btn Menu
-  const openMenu = document.getElementById("openMenu");
-  const closeMenu = document.getElementById("closeMenu");
-  const menu = document.querySelector(".menuBarContainer");
+  const openMenu: Element = document.getElementById("openMenu")!;
+  const closeMenu: Element = document.getElementById("closeMenu")!;
+  const menu: Element = document.querySelector(".menuBarContainer")!;
   const items = document.querySelectorAll(".items");
 
-  const toggleMenu = (value) => {
+  const toggleMenu = (value: number) => {
     if (value == 0) {
       closeMenu.classList.add("inactive");
       openMenu.classList.remove("inactive");
@@ -62,10 +57,10 @@ const { btnTitle } = Astro.props;
     toggleMenu(menuBtn.value);
   });
   // Items del menu
-  items.forEach(i =>{
+  items.forEach((i) => {
     i.addEventListener("click", () => {
       toggleMenu(menuBtn.value);
-    })
+    });
   });
 </script>
 
@@ -73,8 +68,7 @@ const { btnTitle } = Astro.props;
   .menuBarContainer {
     display: flex;
     flex-direction: row;
-    /* animation: listMenu 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; */
-    animation-delay: .8s;
+    animation-delay: 0.8s;
   }
   .menuBar {
     width: 100%;
@@ -99,7 +93,7 @@ const { btnTitle } = Astro.props;
     color: var(--cl-2);
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--cl-1)
+    color: var(--cl-1);
   }
   #menuItems:hover,
   a li:active {
@@ -126,7 +120,7 @@ const { btnTitle } = Astro.props;
     transform: translateY(5px);
     transition: all 0.2s ease;
   }
-  .menuItemsBtn{
+  .menuItemsBtn {
     padding: 7.5px 15px !important;
     background-color: var(--bg-8);
     border-radius: 30px;
@@ -159,9 +153,13 @@ const { btnTitle } = Astro.props;
     color: var(--cl-2);
   }
   @keyframes listMenu {
-  0% {transform: translateX(500px);}
-  100% {transform: translateX(0px);}
-}
+    0% {
+      transform: translateX(500px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
   /* Media Queries */
   @media screen and (max-width: 425px) {
     .menuBar {
@@ -175,9 +173,9 @@ const { btnTitle } = Astro.props;
       color: var(--cl-1);
       z-index: 200;
     }
-    .menuItemsBtn{
-    background-color: transparent;
-  }
+    .menuItemsBtn {
+      background-color: transparent;
+    }
     .menuBarContainer {
       width: 100vw;
       height: 180px;
