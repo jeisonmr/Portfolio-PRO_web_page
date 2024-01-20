@@ -15,13 +15,14 @@
   .dataContainer {
     width: 50%;
     height: 100dvh;
-    padding: 10% 0 0 0  !important;
+    padding: 20% 0 10px 20%  !important;
     z-index: 50;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: sticky;
     top: 0;
+
   }
   .infoContainer {
     width: 50%;

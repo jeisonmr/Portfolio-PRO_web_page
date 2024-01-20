@@ -10,7 +10,7 @@
 .columnSkills__Data {
   width: 50%;
   height: 100dvh;
-  padding: 10% 0 0 0 !important;
+  padding: 10% 25% 0 0 !important;
   z-index: 50;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   width: 50%;
   position: relative;
   z-index: 50;
-  padding: 10% 5% 10% 5% !important;
+  padding: 10% 1% 10% 10% !important;
 }
 .titleSkills {
   font-family: var(--font-5);
@@ -40,8 +40,8 @@
 }
 
 .techContainer {
-  padding: 0 100px !important;
-  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .columnSkills > h2 {
@@ -122,6 +122,7 @@
   }
   .columnSkills__Data {
     width: 40% !important;
+    padding-right: 10px !important ;
   }
   .columnSkills {
     width: 100%;
@@ -183,6 +184,7 @@
   }
   .columnSkills__Title {
     width: 100% !important;
+    padding: 50% 10px !important;
   }
   .techContainer {
     width: 100%;

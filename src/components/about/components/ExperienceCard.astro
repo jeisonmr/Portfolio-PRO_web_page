@@ -32,7 +32,7 @@ const { company, responsabilities, stack, time, img } = Astro.props;
   .experience__card {
     display: flex;
     flex-direction: row;
-    transition: .1s;
+    transition: .5s;
     width: 100%;
     height: auto;
     padding: 30px 30px !important;
@@ -40,12 +40,11 @@ const { company, responsabilities, stack, time, img } = Astro.props;
 
   }
   .experience__card:hover {
-    border-radius: 8px;
-    /* background: #ffffff17; */
-    background: #141414;
+    border-radius: 10px;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    transition: 0.05s;
+    background: var(--bg-1);
+    transition: .5s;
   }
 
 

@@ -17,6 +17,11 @@ import ContactSocial from '../contact/contactCard.astro';
   <div class="socialContainer">
     <!-- <ContactSocial/> -->
   </div>
+  <div class="socialContainer">
+    <div class="socialBtn">
+      <Social />
+    </div>
+  </div>
 </footer>
 
 <style>
@@ -33,5 +38,47 @@ import ContactSocial from '../contact/contactCard.astro';
   }
   .logo > a:hover{
     color: var(--cl-7);
+  }
+  .socialContainer{
+    position: fixed;
+    width: 88px;
+    height: 100px;
+    right: -45px;
+    top: 5% !important;
+    z-index: 999;
+    outline: none;
+    -webkit-tap-highlight-colo: transparent;
+    transition: all 400ms ease-in-out;
+    animation: 1.5s ease 0s infinite iconoSocial;
+
+  }
+  .socialBtn{
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    -webkit-tap-highlight-colo: transparent;
+  }
+
+  @keyframes iconoSocial {
+    0%{
+      top: 5% !important;
+    },
+    25%{
+      top: 2% !important;
+    },
+    50%{
+     top: 5% !important;
+    },
+    100%{
+      top: 7% !important;
+    }
+    }
+
+  @media screen and (max-width: 480px){
+    .socialContainer{
+      top: 10% !important;
+      right: -35px;
+    }
   }
 </style>

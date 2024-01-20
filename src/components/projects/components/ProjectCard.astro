@@ -59,8 +59,8 @@ const { img, title, stack, url } = Astro.props;
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
-    background: #00000099;
+    border-radius: 5px;
+    background: #000000ec;
     z-index: 2;
     transition: 0.5s;
     opacity: 0;
@@ -93,7 +93,7 @@ const { img, title, stack, url } = Astro.props;
     font-family: var(--font-2);
     letter-spacing: 1.5px;
     margin-bottom: 10px !important;
-    color: var(--cl-7)
+    color: var(--cl-1)
   }
   .card .info ul li {
     letter-spacing: 1px;
@@ -116,22 +116,20 @@ const { img, title, stack, url } = Astro.props;
     outline: none;
     border: none;
     border-radius: 30px;
-    background-color: var(--bg-8);
-    color: var(--cl-1) !important;
+    background-color: var(--bg-5);
+    /* color: var(--cl-1) !important; */
     font-weight: bold;
     cursor: pointer;
     transition: 0.4s ease;
   }
   .card .info button:hover {
-    background-color: var(--bg-9);
+    background-color: var(--bg-1);
+    color: var(--cl-7) !important;
     outline: none;
     border: none;
   }
   .card .info button a {
-    color: var(--cl-1) !important;
+    color: var(--cl-8) !important;
     font-size: 10px;
-  }
-  .card .info button a:hover {
-    color: var(--cl-1) !important;
   }
 </style>
