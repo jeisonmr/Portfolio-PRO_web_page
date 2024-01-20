@@ -4,7 +4,7 @@ const sass = "/public/Resource/img/habilidades/sassg.webp";
 const javascript = "/public/Resource/img/habilidades/javascriptg.webp";
 const typescript = "/public/Resource/img/habilidades/typescriptg.webp";
 // ----------------------------------------------------------------
-const react = "/public/Resource/img/habilidades/Reactg.webp";
+const react = "/public/Resource/img/habilidades/reactg.webp";
 const bootstrap = "/public/Resource/img/habilidades/bootstrapg.webp";
 const astro = "/public/Resource/img/habilidades/astrog.webp";
 const tailwindcss = "/public/Resource/img/habilidades/tailwindcssg.webp";

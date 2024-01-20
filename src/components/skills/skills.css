@@ -22,7 +22,7 @@
   width: 50%;
   position: relative;
   z-index: 50;
-  padding: 10% 1% 10% 5% !important;
+  padding: 10% 5% 10% 5% !important;
 }
 .titleSkills {
   font-family: var(--font-5);
@@ -41,6 +41,7 @@
 
 .techContainer {
   padding: 0 100px !important;
+  text-align: center;
 }
 
 .columnSkills > h2 {

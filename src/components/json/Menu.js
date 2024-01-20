@@ -8,7 +8,7 @@ const lista = [
     url: "#skills",
   },
   {
-    item: "Projetcs",
+    item: "Projects",
     url: "#projects",
   },
 ];
