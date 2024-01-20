@@ -19,7 +19,7 @@ const seven = "/public/Resource/img/proyectos/seven-time.png";
 const wtc = "/public/Resource/img/proyectos/wtc.png";
 const neurodiagnostico = "/public/Resource/img/proyectos/neurodiagnostico.png";
 const vigimonstruos = "/public/Resource/img/proyectos/vigimonstruos.png";
-
+const ayco = '/public/Resource/img/proyectos/ayco.png';
 
 
 const dataProjects = {
@@ -83,9 +83,9 @@ const dataProjects = {
     },
     {
       id: 7,
-      img: alutraficled,
-      proyecto: "AlutraficLed",
-      url: "https://alutraficled.com/",
+      img: ayco,
+      proyecto: "Ayco Motocicletas",
+      url: "https://ayco.com.co/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
       category: 'cms'
@@ -101,6 +101,15 @@ const dataProjects = {
     },
     {
       id: 9,
+      img: alutraficled,
+      proyecto: "AlutraficLed",
+      url: "https://alutraficled.com/",
+      tecnologias: ["WordPress", "Elementor", "Figma"],
+      active: true,
+      category: 'cms'
+    },
+    {
+      id: 10,
       img: campusultra,
       proyecto: "Campus Ultra",
       url: "https://campusultra.com/",
@@ -109,7 +118,7 @@ const dataProjects = {
       category: 'cms'
     },
     {
-      id: 10,
+      id: 11,
       img: casalianza,
       proyecto: "Casalianza",
       url: "https://www.casalianzacolombia.com/",
@@ -118,7 +127,7 @@ const dataProjects = {
       category: 'cms'
     },
     {
-      id: 11,
+      id: 12,
       img: infortec,
       proyecto: "Infortec",
       url: "https://www.infortec.co/",
@@ -127,7 +136,7 @@ const dataProjects = {
       category: 'cms'
     },
     {
-      id: 12,
+      id: 13,
       img: sneaker,
       proyecto: "Sneaker Girl",
       url: "https://sneakergirls.store/",
@@ -136,7 +145,7 @@ const dataProjects = {
       category: 'cms'
     },
     {
-      id: 13,
+      id: 14,
       img: sole,
       proyecto: "Solé",
       url: "https://www.solesoluciones.com/",
@@ -145,7 +154,7 @@ const dataProjects = {
       category: 'cms'
     },
     {
-      id: 14,
+      id: 15,
       img: seven,
       proyecto: "Seven 7imes",
       url: "https://seven7times.com/",
@@ -154,7 +163,7 @@ const dataProjects = {
       category: 'cms'
     },
     {
-      id: 15,
+      id: 16,
       img: wtc,
       proyecto: "World Trade Center",
       url: "https://wtcpereira.com/",
@@ -163,7 +172,7 @@ const dataProjects = {
       category: 'cms'
     },
     {
-      id: 16,
+      id: 17,
       img: vigimonstruos,
       proyecto: "VigiMonstruos",
       url: "https://vigimonstruos.aseopereira.gov.co/",
@@ -172,7 +181,7 @@ const dataProjects = {
       category: 'cms'
     },
     {
-      id: 17,
+      id: 18,
       img: neurodiagnostico,
       proyecto: "Neurodiagnostico",
       url: "http://www.neurodiagnostico.com.co/",
@@ -181,9 +190,9 @@ const dataProjects = {
       category: 'cms'
     },
     {
-      id: 18,
+      id: 19,
       img: ultracem_colombia,
-      proyecto: "Campus Ultra Colombia",
+      proyecto: "Colombia",
       url: "https://ultracem.co/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
@@ -191,9 +200,9 @@ const dataProjects = {
     },
     ,
     {
-      id: 19,
+      id: 20,
       img: ultracem_honduras,
-      proyecto: "Campus Ultra Honduras",
+      proyecto: "Honduras",
       url: "https://ultracem.hn/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
@@ -201,9 +210,9 @@ const dataProjects = {
     },
     ,
     {
-      id: 20,
+      id: 21,
       img: ultracem_guatemala,
-      proyecto: "Campus Ultra Guatemala",
+      proyecto: "Guatemala",
       url: "https://ultracem.gt/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,
@@ -211,9 +220,9 @@ const dataProjects = {
     },
     ,
     {
-      id: 21,
+      id: 22,
       img: ultracem_panama,
-      proyecto: "Campus Ultra Panamá",
+      proyecto: "Panamá",
       url: "https://ultracem.pa/",
       tecnologias: ["WordPress", "Elementor", "Figma"],
       active: true,

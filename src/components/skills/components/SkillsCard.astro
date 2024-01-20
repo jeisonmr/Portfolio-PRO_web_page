@@ -6,7 +6,7 @@ interface props {
 
 const { img, tech } = Astro.props;
 
-const imgSrc = JSON.stringify(img);
+// const imgSrc = JSON.stringify(img);
 
 ---
 
@@ -18,10 +18,10 @@ const imgSrc = JSON.stringify(img);
 {console.log(img)}
 <style>
   .skills__card {
-    width: 125px;
-    height: 100px;
+    /* width: 100px; */
+    padding: 10px 12px !important;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -31,13 +31,12 @@ const imgSrc = JSON.stringify(img);
     font-size: 0.8vw;
     border-radius: 30px;
     background-color: var(--bg-8);
-    /* padding: 5px 5px !important; */
   }
   .skills__card:hover {
     color: var(--cl-7);
   }
   .skills__card > img {
-    width: 50px;
+    width: 35px;
   }
   @media only screen and (max-width: 834px) {
     .skills__card{

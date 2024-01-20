@@ -1,18 +1,25 @@
 ---
-interface FilterProjects {
-}
+interface FilterProjects {}
 const { itemsProjects } = Astro.props;
 
 import DataProjects from "../../json/Projects";
 import ProjectCard from "./ProjectCard.astro";
 ---
 
-
-
 <section id="works" class="projectContainer">
   <main class="projectCard__Container">
-    {DataProjects.proyectos.map((itemsProjects) => {
-        return ( itemsProjects && <ProjectCard img={itemsProjects.img} url={itemsProjects.url} title={itemsProjects.proyecto} stack={itemsProjects.tecnologias} />);
+    {
+      DataProjects.proyectos.map((itemsProjects) => {
+        return (
+          itemsProjects && (
+            <ProjectCard
+              img={itemsProjects.img}
+              url={itemsProjects.url}
+              title={itemsProjects.proyecto}
+              stack={itemsProjects.tecnologias}
+            />
+          )
+        );
       })
     }
   </main>
@@ -24,10 +31,9 @@ import ProjectCard from "./ProjectCard.astro";
     width: 100%;
     height: auto;
     padding: 40px 20px !important;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 50px;
   }
 
